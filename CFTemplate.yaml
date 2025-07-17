@@ -1,0 +1,325 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Metadata:
+    Generator: "former2"
+Description: ""
+Resources:
+    ECSCluster:
+        Type: "AWS::ECS::Cluster"
+        Properties:
+            ClusterName: "llm-prod-cluster"
+            CapacityProviders: 
+              - "FARGATE"
+              - "FARGATE_SPOT"
+
+    S3Bucket:
+        Type: "AWS::S3::Bucket"
+        Properties:
+            BucketName: "my-llm-upload"
+            BucketEncryption: 
+                ServerSideEncryptionConfiguration: 
+                  - 
+                    ServerSideEncryptionByDefault: 
+                        SSEAlgorithm: "AES256"
+                    BucketKeyEnabled: true
+            NotificationConfiguration: 
+                LambdaConfigurations: 
+                  - 
+                    Event: "s3:ObjectCreated:*"
+                    Filter: 
+                        S3Key: 
+                            Rules: 
+                              - 
+                                Name: "Prefix"
+                                Value: ""
+                              - 
+                                Name: "Suffix"
+                                Value: ""
+                    Function: !GetAtt LambdaFunction2.Arn
+            OwnershipControls: 
+                Rules: 
+                  - 
+                    ObjectOwnership: "BucketOwnerEnforced"
+            PublicAccessBlockConfiguration: 
+                BlockPublicAcls: true
+                BlockPublicPolicy: true
+                IgnorePublicAcls: true
+                RestrictPublicBuckets: true
+
+    S3Bucket2:
+        Type: "AWS::S3::Bucket"
+        Properties:
+            BucketName: "intermediate-outputs-bucket"
+            BucketEncryption: 
+                ServerSideEncryptionConfiguration: 
+                  - 
+                    ServerSideEncryptionByDefault: 
+                        SSEAlgorithm: "AES256"
+                    BucketKeyEnabled: true
+            NotificationConfiguration: 
+                QueueConfigurations: 
+                  - 
+                    Event: "s3:ObjectCreated:*"
+                    Filter: 
+                        S3Key: 
+                            Rules: 
+                              - 
+                                Name: "Prefix"
+                                Value: ""
+                              - 
+                                Name: "Suffix"
+                                Value: ""
+                    Queue: !Ref SQSQueue6
+            OwnershipControls: 
+                Rules: 
+                  - 
+                    ObjectOwnership: "BucketOwnerEnforced"
+            PublicAccessBlockConfiguration: 
+                BlockPublicAcls: true
+                BlockPublicPolicy: true
+                IgnorePublicAcls: true
+                RestrictPublicBuckets: true
+
+    DynamoDBTable:
+        Type: "AWS::DynamoDB::Table"
+        Properties:
+            AttributeDefinitions: 
+              - 
+                AttributeName: "FileID"
+                AttributeType: "S"
+            BillingMode: "PAY_PER_REQUEST"
+            TableName: "FilesUploadTable"
+            KeySchema: 
+              - 
+                AttributeName: "FileID"
+                KeyType: "HASH"
+
+    LambdaFunction:
+        Type: "AWS::Lambda::Function"
+        Properties:
+            Description: ""
+            Environment: 
+                Variables: 
+                    DDB_TABLE_NAME: !Ref DynamoDBTable
+                    BUCKET_NAME: !Ref S3Bucket
+            FunctionName: "QueryFunction"
+            Handler: "lambda_function.lambda_handler"
+            Architectures: 
+              - "x86_64"
+            Code: 
+                S3Bucket: "prod-04-2014-tasks"
+                S3Key: "/snapshots/090081990755/QueryFunction-c442f707-e822-4c1c-a898-6c3c4f82be25"
+                S3ObjectVersion: "ic1PlhhBGBxuDjgHDO6nh_oH8CEpsXYz"
+            MemorySize: 128
+            Role: "arn:aws:iam::090081990755:role/service-role/QueryFunction-role-cdtyie8o"
+            Runtime: "python3.13"
+            Timeout: 3
+            TracingConfig: 
+                Mode: "PassThrough"
+            EphemeralStorage: 
+                Size: 512
+
+    LambdaFunction2:
+        Type: "AWS::Lambda::Function"
+        Properties:
+            Description: ""
+            Environment: 
+                Variables: 
+                    DOCX_QUEUE_URL: !Sub "https://sqs.${AWS::Region}.amazonaws.com/090081990755/${SQSQueue.QueueName}"
+                    EXCEL_QUEUE_URL: !Sub "https://sqs.${AWS::Region}.amazonaws.com/090081990755/${SQSQueue2.QueueName}"
+                    PDF_QUEUE_URL: !Sub "https://sqs.${AWS::Region}.amazonaws.com/090081990755/${SQSQueue5.QueueName}"
+                    IMAGE_QUEUE_URL: !Sub "https://sqs.${AWS::Region}.amazonaws.com/090081990755/${SQSQueue3.QueueName}"
+            FunctionName: "RouteFileTypeFunction"
+            Handler: "lambda_function.lambda_handler"
+            Architectures: 
+              - "x86_64"
+            Code: 
+                S3Bucket: "prod-04-2014-tasks"
+                S3Key: "/snapshots/090081990755/RouteFileTypeFunction-1c5a4ea6-0d16-42df-921a-bd6e0287b68b"
+                S3ObjectVersion: "gNsrd3E2qEpvh7vOCsGs0UOOWeH4yTcp"
+            MemorySize: 128
+            Role: "arn:aws:iam::090081990755:role/service-role/RouteFileTypeFunction-role-2epkr4mi"
+            Runtime: "python3.13"
+            Timeout: 3
+            TracingConfig: 
+                Mode: "PassThrough"
+            Layers: 
+              - !Sub "arn:aws:lambda:${AWS::Region}:090081990755:layer:filetypeLayer:1"
+            EphemeralStorage: 
+                Size: 512
+
+    ApiGatewayRestApi:
+        Type: "AWS::ApiGateway::RestApi"
+        Properties:
+            Name: "LLMTestAPI"
+            Description: "An API endpoint to handle file uploads and user queries"
+            ApiKeySourceType: "HEADER"
+            EndpointConfiguration: 
+                Types: 
+                  - "REGIONAL"
+
+    IAMUser:
+        Type: "AWS::IAM::User"
+        Properties:
+            Path: "/"
+            UserName: "anhphan"
+            Groups: 
+              - "VPBankHackathon"
+            ManagedPolicyArns: 
+              - "arn:aws:iam::aws:policy/IAMUserChangePassword"
+
+    IAMUser2:
+        Type: "AWS::IAM::User"
+        Properties:
+            Path: "/"
+            UserName: "BedrockAPIKey-d7yu"
+
+    IAMUser3:
+        Type: "AWS::IAM::User"
+        Properties:
+            Path: "/"
+            UserName: "BedrockAPIKey-mmg9"
+
+    IAMUser4:
+        Type: "AWS::IAM::User"
+        Properties:
+            Path: "/"
+            UserName: "BedrockAPIKey-tgln"
+
+    IAMUser5:
+        Type: "AWS::IAM::User"
+        Properties:
+            Path: "/"
+            UserName: "minhthao"
+            Groups: 
+              - "VPBankHackathon"
+            ManagedPolicyArns: 
+              - "arn:aws:iam::aws:policy/IAMUserChangePassword"
+
+    IAMUser6:
+        Type: "AWS::IAM::User"
+        Properties:
+            Path: "/"
+            UserName: "tanhong"
+            Groups: 
+              - "VPBankHackathon"
+            ManagedPolicyArns: 
+              - "arn:aws:iam::aws:policy/IAMUserChangePassword"
+
+    IAMUser7:
+        Type: "AWS::IAM::User"
+        Properties:
+            Path: "/"
+            UserName: "testing-user"
+            Tags: 
+              - 
+                Key: "AKIARJ6KODBR455FHEPP"
+                Value: "Former2 access key"
+            ManagedPolicyArns: 
+              - "arn:aws:iam::aws:policy/ReadOnlyAccess"
+              - "arn:aws:iam::aws:policy/IAMUserChangePassword"
+
+    IAMUser8:
+        Type: "AWS::IAM::User"
+        Properties:
+            Path: "/"
+            UserName: "trungthanh"
+            Groups: 
+              - "VPBankHackathon"
+            Tags: 
+              - 
+                Key: "AKIARJ6KODBRST6INOXF"
+                Value: "Bedrock access key"
+            ManagedPolicyArns: 
+              - "arn:aws:iam::aws:policy/IAMUserChangePassword"
+
+    SQSQueue:
+        Type: "AWS::SQS::Queue"
+        Properties:
+            DelaySeconds: "0"
+            MaximumMessageSize: "262144"
+            MessageRetentionPeriod: "345600"
+            ReceiveMessageWaitTimeSeconds: "0"
+            VisibilityTimeout: "30"
+            QueueName: "docx-queue"
+            RedrivePolicy: !Sub "{\"deadLetterTargetArn\":\"${SQSQueue4}\",\"maxReceiveCount\":10}"
+
+    SQSQueue2:
+        Type: "AWS::SQS::Queue"
+        Properties:
+            DelaySeconds: "0"
+            MaximumMessageSize: "262144"
+            MessageRetentionPeriod: "345600"
+            ReceiveMessageWaitTimeSeconds: "0"
+            VisibilityTimeout: "30"
+            QueueName: "excel-queue"
+            RedrivePolicy: !Sub "{\"deadLetterTargetArn\":\"${SQSQueue4}\",\"maxReceiveCount\":10}"
+
+    SQSQueue3:
+        Type: "AWS::SQS::Queue"
+        Properties:
+            DelaySeconds: "0"
+            MaximumMessageSize: "262144"
+            MessageRetentionPeriod: "345600"
+            ReceiveMessageWaitTimeSeconds: "0"
+            VisibilityTimeout: "30"
+            QueueName: "image-queue"
+            RedrivePolicy: !Sub "{\"deadLetterTargetArn\":\"${SQSQueue4}\",\"maxReceiveCount\":10}"
+
+    SQSQueue4:
+        Type: "AWS::SQS::Queue"
+        Properties:
+            DelaySeconds: "0"
+            MaximumMessageSize: "262144"
+            MessageRetentionPeriod: "345600"
+            ReceiveMessageWaitTimeSeconds: "0"
+            VisibilityTimeout: "30"
+            QueueName: "myqueue-dlq"
+
+    SQSQueue5:
+        Type: "AWS::SQS::Queue"
+        Properties:
+            DelaySeconds: "0"
+            MaximumMessageSize: "262144"
+            MessageRetentionPeriod: "345600"
+            ReceiveMessageWaitTimeSeconds: "0"
+            VisibilityTimeout: "30"
+            QueueName: "pdf-queue"
+            RedrivePolicy: !Sub "{\"deadLetterTargetArn\":\"${SQSQueue4}\",\"maxReceiveCount\":10}"
+
+    SQSQueue6:
+        Type: "AWS::SQS::Queue"
+        Properties:
+            DelaySeconds: "0"
+            MaximumMessageSize: "262144"
+            MessageRetentionPeriod: "345600"
+            ReceiveMessageWaitTimeSeconds: "0"
+            VisibilityTimeout: "30"
+            QueueName: "semantic-chunking-queue"
+            RedrivePolicy: !Sub "{\"deadLetterTargetArn\":\"${SQSQueue4}\",\"maxReceiveCount\":10}"
+
+    BudgetsBudget:
+        Type: "AWS::Budgets::Budget"
+        Properties:
+            Budget: 
+                BudgetLimit: 
+                    Amount: "1.0"
+                    Unit: "USD"
+                TimePeriod: 
+                    Start: "2025-07-01T00:00:00.000Z"
+                    End: "2087-06-15T00:00:00.000Z"
+                TimeUnit: "MONTHLY"
+                BudgetName: "My Zero-Spend Budget"
+                CostTypes: 
+                    IncludeTax: true
+                    IncludeSubscription: true
+                    UseBlended: false
+                    IncludeRefund: true
+                    IncludeCredit: true
+                    IncludeUpfront: true
+                    IncludeRecurring: true
+                    IncludeOtherSubscription: true
+                    IncludeSupport: true
+                    IncludeDiscount: true
+                    UseAmortized: false
+                BudgetType: "COST"
+
