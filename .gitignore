@@ -343,12 +343,12 @@ vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 
 # Input testing files
-.docx
-.pdf
-.xlsx
-.png
-.jpg
-.jpeg
+*.docx
+*.pdf
+*.xlsx
+*.png
+*.jpg
+*.jpeg
 
 # System files
 .DS_Store
