@@ -41,6 +41,10 @@ Dockerized microservice responsible for:
 * Generating vector representations or structured chunks
 * Preparing the data for search indexing
 
+### `frontend/`
+
+Source code for the frontend of the app, which was developed using NextJS and Typescript, together with AWS Amplify and Cognito for authentication
+
 ---
 
 ## 🧭 System Architecture
