@@ -3,6 +3,530 @@ Metadata:
     Generator: "former2"
 Description: ""
 Resources:
+    LambdaFunction:
+        Type: "AWS::Lambda::Function"
+        Properties:
+            Description: "AmplifyManagedTable - isComplete (amplify-frontendapp-henryng101-sandbox-7b812204ff/data/amplifyData/AmplifyTableManager/TableManagerCustomProvider)"
+            FunctionName: "amplify-frontendapp-henry-TableManagerCustomProvid-OMToAYo4TlC2"
+            Handler: "amplify-table-manager-handler.isComplete"
+            Architectures: 
+              - "x86_64"
+            Code: 
+                S3Bucket: "prod-04-2014-tasks"
+                S3Key: !Sub "/snapshots/${AWS::AccountId}/amplify-frontendapp-henry-TableManagerCustomProvid-OMToAYo4TlC2-128f962e-1986-4482-89b3-798ab4e1dfcc"
+                S3ObjectVersion: "zlIc0ZyylM2RT05XLqSaG2n2tJXNPAwq"
+            MemorySize: 128
+            Role: !GetAtt IAMRole11.Arn
+            Runtime: "nodejs20.x"
+            Timeout: 840
+            TracingConfig: 
+                Mode: "PassThrough"
+            EphemeralStorage: 
+                Size: 512
+            Tags: 
+              - 
+                Key: "amplify:deployment-type"
+                Value: "sandbox"
+              - 
+                Key: "amplify:friendly-name"
+                Value: "amplifyData"
+              - 
+                Key: "created-by"
+                Value: "amplify"
+
+    LambdaFunction2:
+        Type: "AWS::Lambda::Function"
+        Properties:
+            Description: ""
+            FunctionName: "amplify-d1m1jfdu9315t1-ma-AmplifyBranchLinkerCusto-Co2zr2pN5qc3"
+            Handler: "index.handler"
+            Architectures: 
+              - "x86_64"
+            Code: 
+                S3Bucket: "prod-04-2014-tasks"
+                S3Key: !Sub "/snapshots/${AWS::AccountId}/amplify-d1m1jfdu9315t1-ma-AmplifyBranchLinkerCusto-Co2zr2pN5qc3-8338cc9f-da9a-43a3-bbd8-7de7caedffd1"
+                S3ObjectVersion: "ROLQEbm3jp5KvS5mmzNenXG_bKN6kqQH"
+            MemorySize: 128
+            Role: !GetAtt IAMRole.Arn
+            Runtime: "nodejs20.x"
+            Timeout: 10
+            TracingConfig: 
+                Mode: "PassThrough"
+            EphemeralStorage: 
+                Size: 512
+            Tags: 
+              - 
+                Key: "amplify:branch-name"
+                Value: "main"
+              - 
+                Key: "amplify:deployment-type"
+                Value: "branch"
+              - 
+                Key: "amplify:app-id"
+                Value: "d1m1jfdu9315t1"
+              - 
+                Key: "created-by"
+                Value: "amplify"
+
+    LambdaFunction3:
+        Type: "AWS::Lambda::Function"
+        Properties:
+            Description: !Sub "Lambda function for auto-deleting objects in ${S3Bucket5} S3 bucket."
+            FunctionName: "amplify-frontendapp-henry-CustomS3AutoDeleteObject-GPbUBacmm2C8"
+            Handler: "index.handler"
+            Architectures: 
+              - "x86_64"
+            Code: 
+                S3Bucket: "prod-04-2014-tasks"
+                S3Key: !Sub "/snapshots/${AWS::AccountId}/amplify-frontendapp-henry-CustomS3AutoDeleteObject-GPbUBacmm2C8-fb20ec90-b8ea-484c-bf33-da38703c2f86"
+                S3ObjectVersion: "lsgSd7naIbWQv_sXNysx7i7chB0noXos"
+            MemorySize: 128
+            Role: !GetAtt IAMRole13.Arn
+            Runtime: "nodejs22.x"
+            Timeout: 900
+            TracingConfig: 
+                Mode: "PassThrough"
+            EphemeralStorage: 
+                Size: 512
+            Tags: 
+              - 
+                Key: "amplify:deployment-type"
+                Value: "sandbox"
+              - 
+                Key: "created-by"
+                Value: "amplify"
+
+    LambdaFunction4:
+        Type: "AWS::Lambda::Function"
+        Properties:
+            Description: "AmplifyManagedTable - onEvent (amplify-frontendapp-henryng101-sandbox-7b812204ff/data/amplifyData/AmplifyTableManager/TableManagerCustomProvider)"
+            Environment: 
+                Variables: 
+                    WAITER_STATE_MACHINE_ARN: !Sub "arn:aws:states:${AWS::Region}:${AWS::AccountId}:stateMachine:AmplifyTableWaiterStateMachine060600BC-en6lIZMNd1e2"
+            FunctionName: "amplify-frontendapp-henry-TableManagerCustomProvid-Q51HfDf6axqz"
+            Handler: "amplify-table-manager-handler.onEvent"
+            Architectures: 
+              - "x86_64"
+            Code: 
+                S3Bucket: "prod-04-2014-tasks"
+                S3Key: !Sub "/snapshots/${AWS::AccountId}/amplify-frontendapp-henry-TableManagerCustomProvid-Q51HfDf6axqz-fd6b2886-7a26-41d3-a8fa-9a1e5dc7b3a6"
+                S3ObjectVersion: "T7L.YErydbaVADhOIbPis5HSLoCEf.SL"
+            MemorySize: 128
+            Role: !GetAtt IAMRole12.Arn
+            Runtime: "nodejs20.x"
+            Timeout: 840
+            TracingConfig: 
+                Mode: "PassThrough"
+            EphemeralStorage: 
+                Size: 512
+            Tags: 
+              - 
+                Key: "amplify:deployment-type"
+                Value: "sandbox"
+              - 
+                Key: "amplify:friendly-name"
+                Value: "amplifyData"
+              - 
+                Key: "created-by"
+                Value: "amplify"
+
+    LambdaFunction5:
+        Type: "AWS::Lambda::Function"
+        Properties:
+            Description: !Sub "Lambda function for auto-deleting objects in ${S3Bucket} S3 bucket."
+            FunctionName: "amplify-d1m1jfdu9315t1-ma-CustomS3AutoDeleteObject-zYZHBqmr5hJS"
+            Handler: "index.handler"
+            Architectures: 
+              - "x86_64"
+            Code: 
+                S3Bucket: "prod-04-2014-tasks"
+                S3Key: !Sub "/snapshots/${AWS::AccountId}/amplify-d1m1jfdu9315t1-ma-CustomS3AutoDeleteObject-zYZHBqmr5hJS-5e41f03e-ea30-4d7a-af96-4ba52eac318b"
+                S3ObjectVersion: "uNFde0uY4YaKoy0c6W._abG.WxOqiD1h"
+            MemorySize: 128
+            Role: !GetAtt IAMRole8.Arn
+            Runtime: "nodejs22.x"
+            Timeout: 900
+            TracingConfig: 
+                Mode: "PassThrough"
+            EphemeralStorage: 
+                Size: 512
+            Tags: 
+              - 
+                Key: "amplify:branch-name"
+                Value: "main"
+              - 
+                Key: "amplify:deployment-type"
+                Value: "branch"
+              - 
+                Key: "amplify:app-id"
+                Value: "d1m1jfdu9315t1"
+              - 
+                Key: "created-by"
+                Value: "amplify"
+
+    LambdaFunction6:
+        Type: "AWS::Lambda::Function"
+        Properties:
+            Description: "AmplifyManagedTable - isComplete (amplify-d1m1jfdu9315t1-main-branch-fd738d4208/data/amplifyData/AmplifyTableManager/TableManagerCustomProvider)"
+            FunctionName: "amplify-d1m1jfdu9315t1-ma-TableManagerCustomProvid-ieX3P4NLyMom"
+            Handler: "amplify-table-manager-handler.isComplete"
+            Architectures: 
+              - "x86_64"
+            Code: 
+                S3Bucket: "prod-04-2014-tasks"
+                S3Key: !Sub "/snapshots/${AWS::AccountId}/amplify-d1m1jfdu9315t1-ma-TableManagerCustomProvid-ieX3P4NLyMom-f215a923-8f37-4408-b88d-25a681a43e98"
+                S3ObjectVersion: "vP_vW.YsKaPUksdoXaAg43XCiHfQc8cv"
+            MemorySize: 128
+            Role: !GetAtt IAMRole5.Arn
+            Runtime: "nodejs20.x"
+            Timeout: 840
+            TracingConfig: 
+                Mode: "PassThrough"
+            EphemeralStorage: 
+                Size: 512
+            Tags: 
+              - 
+                Key: "amplify:branch-name"
+                Value: "main"
+              - 
+                Key: "amplify:deployment-type"
+                Value: "branch"
+              - 
+                Key: "amplify:friendly-name"
+                Value: "amplifyData"
+              - 
+                Key: "amplify:app-id"
+                Value: "d1m1jfdu9315t1"
+              - 
+                Key: "created-by"
+                Value: "amplify"
+
+    LambdaFunction7:
+        Type: "AWS::Lambda::Function"
+        Properties:
+            Description: "AWS CDK resource provider framework - onEvent (amplify-d1m1jfdu9315t1-main-branch-fd738d4208/AmplifyBranchLinker/CustomResourceProvider)"
+            Environment: 
+                Variables: 
+                    USER_ON_EVENT_FUNCTION_ARN: !GetAtt LambdaFunction2.Arn
+            FunctionName: "amplify-d1m1jfdu9315t1-ma-AmplifyBranchLinkerCusto-HREdb6qQl2RA"
+            Handler: "framework.onEvent"
+            Architectures: 
+              - "x86_64"
+            Code: 
+                S3Bucket: "prod-04-2014-tasks"
+                S3Key: !Sub "/snapshots/${AWS::AccountId}/amplify-d1m1jfdu9315t1-ma-AmplifyBranchLinkerCusto-HREdb6qQl2RA-01f71939-f11e-4164-b253-f7fec94183da"
+                S3ObjectVersion: "RCuoQDXq_36T91MMCLtSjEBwnZ.zihBo"
+            MemorySize: 128
+            Role: !GetAtt IAMRole4.Arn
+            Runtime: "nodejs22.x"
+            Timeout: 900
+            TracingConfig: 
+                Mode: "PassThrough"
+            EphemeralStorage: 
+                Size: 512
+            Tags: 
+              - 
+                Key: "amplify:branch-name"
+                Value: "main"
+              - 
+                Key: "amplify:deployment-type"
+                Value: "branch"
+              - 
+                Key: "amplify:app-id"
+                Value: "d1m1jfdu9315t1"
+              - 
+                Key: "created-by"
+                Value: "amplify"
+
+    LambdaFunction8:
+        Type: "AWS::Lambda::Function"
+        Properties:
+            Description: ""
+            Environment: 
+                Variables: 
+                    AWS_CA_BUNDLE: "/etc/pki/ca-trust/extracted/pem/tls-ca-bundle.pem"
+            FunctionName: "amplify-frontendapp-henry-CustomCDKBucketDeploymen-tsnUfg9nxNPy"
+            Handler: "index.handler"
+            Architectures: 
+              - "x86_64"
+            Code: 
+                S3Bucket: "prod-04-2014-tasks"
+                S3Key: !Sub "/snapshots/${AWS::AccountId}/amplify-frontendapp-henry-CustomCDKBucketDeploymen-tsnUfg9nxNPy-075d988c-3d43-4b4d-a66b-447eb346ae17"
+                S3ObjectVersion: "YvYa61_Q.49KT_ClryYFksDTiwR8Ety1"
+            MemorySize: 1536
+            Role: !GetAtt IAMRole16.Arn
+            Runtime: "python3.11"
+            Timeout: 900
+            TracingConfig: 
+                Mode: "PassThrough"
+            Layers: 
+              - !Sub "arn:aws:lambda:${AWS::Region}:${AWS::AccountId}:layer:amplifyDataAmplifyCodegenAssetsAmplifyCodegenAssetsDeploymentAwsCliLayerE322F905:2"
+            EphemeralStorage: 
+                Size: 512
+            Tags: 
+              - 
+                Key: "amplify:deployment-type"
+                Value: "sandbox"
+              - 
+                Key: "created-by"
+                Value: "amplify"
+
+    LambdaFunction9:
+        Type: "AWS::Lambda::Function"
+        Properties:
+            Description: ""
+            Environment: 
+                Variables: 
+                    DOCX_QUEUE_URL: !Sub "https://sqs.${AWS::Region}.amazonaws.com/${AWS::AccountId}/${SQSQueue2.QueueName}"
+                    EXCEL_QUEUE_URL: !Sub "https://sqs.${AWS::Region}.amazonaws.com/${AWS::AccountId}/${SQSQueue.QueueName}"
+                    PDF_QUEUE_URL: !Sub "https://sqs.${AWS::Region}.amazonaws.com/${AWS::AccountId}/${SQSQueue5.QueueName}"
+                    IMAGE_QUEUE_URL: !Sub "https://sqs.${AWS::Region}.amazonaws.com/${AWS::AccountId}/${SQSQueue3.QueueName}"
+            FunctionName: "RouteFileTypeFunction"
+            Handler: "lambda_function.lambda_handler"
+            Architectures: 
+              - "x86_64"
+            Code: 
+                S3Bucket: "prod-04-2014-tasks"
+                S3Key: !Sub "/snapshots/${AWS::AccountId}/RouteFileTypeFunction-1c5a4ea6-0d16-42df-921a-bd6e0287b68b"
+                S3ObjectVersion: "gNsrd3E2qEpvh7vOCsGs0UOOWeH4yTcp"
+            MemorySize: 128
+            Role: !Sub "arn:aws:iam::${AWS::AccountId}:role/service-role/RouteFileTypeFunction-role-2epkr4mi"
+            Runtime: "python3.13"
+            Timeout: 3
+            TracingConfig: 
+                Mode: "PassThrough"
+            Layers: 
+              - !Sub "arn:aws:lambda:${AWS::Region}:${AWS::AccountId}:layer:filetypeLayer:1"
+            EphemeralStorage: 
+                Size: 512
+
+    LambdaFunction10:
+        Type: "AWS::Lambda::Function"
+        Properties:
+            Description: ""
+            Environment: 
+                Variables: 
+                    DDB_TABLE_NAME: !Ref DynamoDBTable
+                    BUCKET_NAME: !Ref S3Bucket7
+            FunctionName: "QueryFunction"
+            Handler: "lambda_function.lambda_handler"
+            Architectures: 
+              - "x86_64"
+            Code: 
+                S3Bucket: "prod-04-2014-tasks"
+                S3Key: !Sub "/snapshots/${AWS::AccountId}/QueryFunction-c442f707-e822-4c1c-a898-6c3c4f82be25"
+                S3ObjectVersion: "ic1PlhhBGBxuDjgHDO6nh_oH8CEpsXYz"
+            MemorySize: 128
+            Role: !GetAtt IAMRole24.Arn
+            Runtime: "python3.13"
+            Timeout: 3
+            TracingConfig: 
+                Mode: "PassThrough"
+            EphemeralStorage: 
+                Size: 512
+
+    LambdaFunction11:
+        Type: "AWS::Lambda::Function"
+        Properties:
+            Description: "AmplifyManagedTable - onEvent (amplify-d1m1jfdu9315t1-main-branch-fd738d4208/data/amplifyData/AmplifyTableManager/TableManagerCustomProvider)"
+            Environment: 
+                Variables: 
+                    WAITER_STATE_MACHINE_ARN: !Sub "arn:aws:states:${AWS::Region}:${AWS::AccountId}:stateMachine:AmplifyTableWaiterStateMachine060600BC-cxnV2vjyr9E9"
+            FunctionName: "amplify-d1m1jfdu9315t1-ma-TableManagerCustomProvid-tDhl8QmDzMPl"
+            Handler: "amplify-table-manager-handler.onEvent"
+            Architectures: 
+              - "x86_64"
+            Code: 
+                S3Bucket: "prod-04-2014-tasks"
+                S3Key: !Sub "/snapshots/${AWS::AccountId}/amplify-d1m1jfdu9315t1-ma-TableManagerCustomProvid-tDhl8QmDzMPl-af247682-3c72-44c1-948f-409a0d438e44"
+                S3ObjectVersion: "tq4Xs3g7LiSv10ztgxNWTZFXc8Ilwv7P"
+            MemorySize: 128
+            Role: !GetAtt IAMRole3.Arn
+            Runtime: "nodejs20.x"
+            Timeout: 840
+            TracingConfig: 
+                Mode: "PassThrough"
+            EphemeralStorage: 
+                Size: 512
+            Tags: 
+              - 
+                Key: "amplify:branch-name"
+                Value: "main"
+              - 
+                Key: "amplify:deployment-type"
+                Value: "branch"
+              - 
+                Key: "amplify:friendly-name"
+                Value: "amplifyData"
+              - 
+                Key: "amplify:app-id"
+                Value: "d1m1jfdu9315t1"
+              - 
+                Key: "created-by"
+                Value: "amplify"
+
+    LambdaFunction12:
+        Type: "AWS::Lambda::Function"
+        Properties:
+            Description: ""
+            Environment: 
+                Variables: 
+                    AWS_CA_BUNDLE: "/etc/pki/ca-trust/extracted/pem/tls-ca-bundle.pem"
+            FunctionName: "amplify-d1m1jfdu9315t1-ma-CustomCDKBucketDeploymen-ulmcPHnZPiPQ"
+            Handler: "index.handler"
+            Architectures: 
+              - "x86_64"
+            Code: 
+                S3Bucket: "prod-04-2014-tasks"
+                S3Key: !Sub "/snapshots/${AWS::AccountId}/amplify-d1m1jfdu9315t1-ma-CustomCDKBucketDeploymen-ulmcPHnZPiPQ-b8b520fb-2eee-442b-a600-6cac0e6b3285"
+                S3ObjectVersion: "QSJDTmeihT_3R44gLcqufZSt2Pl1y3lx"
+            MemorySize: 1536
+            Role: !GetAtt IAMRole9.Arn
+            Runtime: "python3.11"
+            Timeout: 900
+            TracingConfig: 
+                Mode: "PassThrough"
+            Layers: 
+              - !Sub "arn:aws:lambda:${AWS::Region}:${AWS::AccountId}:layer:amplifyDataAmplifyCodegenAssetsAmplifyCodegenAssetsDeploymentAwsCliLayerE322F905:1"
+            EphemeralStorage: 
+                Size: 512
+            Tags: 
+              - 
+                Key: "amplify:branch-name"
+                Value: "main"
+              - 
+                Key: "amplify:deployment-type"
+                Value: "branch"
+              - 
+                Key: "amplify:app-id"
+                Value: "d1m1jfdu9315t1"
+              - 
+                Key: "created-by"
+                Value: "amplify"
+
+    LambdaPermission:
+        Type: "AWS::Lambda::Permission"
+        Properties:
+            Action: "lambda:InvokeFunction"
+            FunctionName: !GetAtt LambdaFunction9.Arn
+            Principal: "s3.amazonaws.com"
+            SourceArn: !Sub "arn:aws:s3:::${S3Bucket7}"
+
+    LambdaPermission2:
+        Type: "AWS::Lambda::Permission"
+        Properties:
+            Action: "lambda:InvokeFunction"
+            FunctionName: !GetAtt LambdaFunction10.Arn
+            Principal: "apigateway.amazonaws.com"
+            SourceArn: !Sub "arn:aws:execute-api:${AWS::Region}:${AWS::AccountId}:${ApiGatewayRestApi}/*/GET/"
+
+    LambdaLayerVersion:
+        Type: "AWS::Lambda::LayerVersion"
+        Properties:
+            Description: "/opt/awscli/aws"
+            LayerName: "amplifyDataAmplifyCodegenAssetsAmplifyCodegenAssetsDeploymentAwsCliLayerE322F905"
+            Content: 
+                S3Bucket: "prod-04-2014-layers"
+                S3Key: !Sub "/snapshots/${AWS::AccountId}/amplifyDataAmplifyCodegenAssetsAmplifyCodegenAssetsDeploymentAwsCliLayerE322F905-1b61e68e-9090-4251-99b4-8982e5f28128"
+
+    LambdaLayerVersion2:
+        Type: "AWS::Lambda::LayerVersion"
+        Properties:
+            Description: "/opt/awscli/aws"
+            LayerName: "amplifyDataAmplifyCodegenAssetsAmplifyCodegenAssetsDeploymentAwsCliLayerE322F905"
+            Content: 
+                S3Bucket: "prod-04-2014-layers"
+                S3Key: !Sub "/snapshots/${AWS::AccountId}/amplifyDataAmplifyCodegenAssetsAmplifyCodegenAssetsDeploymentAwsCliLayerE322F905-ee70fffa-93dc-49e3-8f79-f92558c647a2"
+
+    LambdaLayerVersion3:
+        Type: "AWS::Lambda::LayerVersion"
+        Properties:
+            Description: "/opt/awscli/aws"
+            LayerName: "modelIntrospectionSchemaBucketDeploymentAwsCliLayer13C432F7"
+            Content: 
+                S3Bucket: "prod-04-2014-layers"
+                S3Key: !Sub "/snapshots/${AWS::AccountId}/modelIntrospectionSchemaBucketDeploymentAwsCliLayer13C432F7-d3b5eae5-8090-49da-8162-f1bdaac9a69e"
+
+    LambdaLayerVersion4:
+        Type: "AWS::Lambda::LayerVersion"
+        Properties:
+            Description: "/opt/awscli/aws"
+            LayerName: "modelIntrospectionSchemaBucketDeploymentAwsCliLayer13C432F7"
+            Content: 
+                S3Bucket: "prod-04-2014-layers"
+                S3Key: !Sub "/snapshots/${AWS::AccountId}/modelIntrospectionSchemaBucketDeploymentAwsCliLayer13C432F7-63847e44-df65-47bf-b8d4-7bffe9323701"
+
+    ECRPublicRepository:
+        Type: "AWS::ECR::PublicRepository"
+        Properties:
+            RepositoryName: "semantic-chunking-worker"
+            RepositoryCatalogData: 
+                OperatingSystems: 
+                  - "Linux"
+                Architectures: 
+                  - "x86-64"
+
+    ECRPublicRepository2:
+        Type: "AWS::ECR::PublicRepository"
+        Properties:
+            RepositoryName: "vector-embedding-worker"
+            RepositoryCatalogData: 
+                OperatingSystems: 
+                  - "Linux"
+                Architectures: 
+                  - "x86-64"
+
+    ECRRepository:
+        Type: "AWS::ECR::Repository"
+        Properties:
+            RepositoryName: "ocr-image-processing-worker"
+            LifecyclePolicy: 
+                RegistryId: !Ref AWS::AccountId
+
+    ECRRepository2:
+        Type: "AWS::ECR::Repository"
+        Properties:
+            RepositoryName: "docx-to-html-worker"
+            LifecyclePolicy: 
+                RegistryId: !Ref AWS::AccountId
+
+    ECRRepository3:
+        Type: "AWS::ECR::Repository"
+        Properties:
+            RepositoryName: !Sub "cdk-hnb659fds-container-assets-${AWS::AccountId}-${AWS::Region}"
+            LifecyclePolicy: 
+                LifecyclePolicyText: "{\"rules\":[{\"rulePriority\":1,\"description\":\"Untagged images should not exist, but expire any older than one year\",\"selection\":{\"tagStatus\":\"untagged\",\"countType\":\"sinceImagePushed\",\"countUnit\":\"days\",\"countNumber\":365},\"action\":{\"type\":\"expire\"}}]}"
+                RegistryId: !Ref AWS::AccountId
+            RepositoryPolicyText: !Sub |
+                {
+                  "Version" : "2012-10-17",
+                  "Statement" : [ {
+                    "Sid" : "LambdaECRImageRetrievalPolicy",
+                    "Effect" : "Allow",
+                    "Principal" : {
+                      "Service" : "lambda.amazonaws.com"
+                    },
+                    "Action" : [ "ecr:BatchGetImage", "ecr:GetDownloadUrlForLayer" ],
+                    "Condition" : {
+                      "StringLike" : {
+                        "aws:sourceArn" : "arn:aws:lambda:${AWS::Region}:${AWS::AccountId}:function:*"
+                      }
+                    }
+                  }, {
+                    "Sid" : "EmrServerlessImageRetrievalPolicy",
+                    "Effect" : "Allow",
+                    "Principal" : {
+                      "Service" : "emr-serverless.amazonaws.com"
+                    },
+                    "Action" : [ "ecr:BatchGetImage", "ecr:GetDownloadUrlForLayer", "ecr:DescribeImages" ],
+                    "Condition" : {
+                      "StringLike" : {
+                        "aws:sourceArn" : "arn:aws:emr-serverless:${AWS::Region}:${AWS::AccountId}:/applications/*"
+                      }
+                    }
+                  } ]
+                }
+
     ECSCluster:
         Type: "AWS::ECS::Cluster"
         Properties:
@@ -11,7 +535,537 @@ Resources:
               - "FARGATE"
               - "FARGATE_SPOT"
 
+    ECSService:
+        Type: "AWS::ECS::Service"
+        Properties:
+            ServiceName: "vector-embedding-task-service-pi4idynb"
+            Cluster: !GetAtt ECSCluster.Arn
+            DesiredCount: 1
+            PlatformVersion: "LATEST"
+            TaskDefinition: !Ref ECSTaskDefinition
+            DeploymentConfiguration: 
+                MaximumPercent: 200
+                MinimumHealthyPercent: 100
+                DeploymentCircuitBreaker: 
+                    Enable: true
+                    Rollback: true
+            Role: !Sub "arn:aws:iam::${AWS::AccountId}:role/aws-service-role/ecs.amazonaws.com/AWSServiceRoleForECS"
+            NetworkConfiguration: 
+                AwsvpcConfiguration: 
+                    AssignPublicIp: "ENABLED"
+                    SecurityGroups: 
+                      - "sg-0b34ec5b5fa22b497"
+                    Subnets: 
+                      - "subnet-071a18df37d5f2ec3"
+                      - "subnet-04b1a79f6ab5a75db"
+                      - "subnet-074478dcc0aeb031c"
+                      - "subnet-0ba23bee12396c17d"
+                      - "subnet-0b64bcd66d5d6a756"
+                      - "subnet-0c7560d155ecda0df"
+            HealthCheckGracePeriodSeconds: 0
+            SchedulingStrategy: "REPLICA"
+            DeploymentController: 
+                Type: "ECS"
+            CapacityProviderStrategy: 
+              - 
+                CapacityProvider: "FARGATE"
+                Weight: 1
+                Base: 0
+
+    ECSService2:
+        Type: "AWS::ECS::Service"
+        Properties:
+            ServiceName: "semantic-chunking-task-service-5frtitzd"
+            Cluster: !GetAtt ECSCluster.Arn
+            DesiredCount: 1
+            PlatformVersion: "LATEST"
+            TaskDefinition: !Ref ECSTaskDefinition2
+            DeploymentConfiguration: 
+                MaximumPercent: 200
+                MinimumHealthyPercent: 100
+                DeploymentCircuitBreaker: 
+                    Enable: true
+                    Rollback: true
+            Role: !Sub "arn:aws:iam::${AWS::AccountId}:role/aws-service-role/ecs.amazonaws.com/AWSServiceRoleForECS"
+            NetworkConfiguration: 
+                AwsvpcConfiguration: 
+                    AssignPublicIp: "ENABLED"
+                    SecurityGroups: 
+                      - "sg-0b34ec5b5fa22b497"
+                    Subnets: 
+                      - "subnet-071a18df37d5f2ec3"
+                      - "subnet-04b1a79f6ab5a75db"
+                      - "subnet-074478dcc0aeb031c"
+                      - "subnet-0ba23bee12396c17d"
+                      - "subnet-0b64bcd66d5d6a756"
+                      - "subnet-0c7560d155ecda0df"
+            HealthCheckGracePeriodSeconds: 0
+            SchedulingStrategy: "REPLICA"
+            DeploymentController: 
+                Type: "ECS"
+            CapacityProviderStrategy: 
+              - 
+                CapacityProvider: "FARGATE"
+                Weight: 1
+                Base: 0
+
+    ECSService3:
+        Type: "AWS::ECS::Service"
+        Properties:
+            ServiceName: "image-to-text-task-service-rgie4chr"
+            Cluster: !GetAtt ECSCluster.Arn
+            DesiredCount: 1
+            PlatformVersion: "LATEST"
+            TaskDefinition: !Ref ECSTaskDefinition3
+            DeploymentConfiguration: 
+                MaximumPercent: 200
+                MinimumHealthyPercent: 100
+                DeploymentCircuitBreaker: 
+                    Enable: true
+                    Rollback: true
+            Role: !Sub "arn:aws:iam::${AWS::AccountId}:role/aws-service-role/ecs.amazonaws.com/AWSServiceRoleForECS"
+            NetworkConfiguration: 
+                AwsvpcConfiguration: 
+                    AssignPublicIp: "ENABLED"
+                    SecurityGroups: 
+                      - "sg-0b34ec5b5fa22b497"
+                    Subnets: 
+                      - "subnet-071a18df37d5f2ec3"
+                      - "subnet-04b1a79f6ab5a75db"
+                      - "subnet-074478dcc0aeb031c"
+                      - "subnet-0ba23bee12396c17d"
+                      - "subnet-0b64bcd66d5d6a756"
+                      - "subnet-0c7560d155ecda0df"
+            HealthCheckGracePeriodSeconds: 0
+            SchedulingStrategy: "REPLICA"
+            DeploymentController: 
+                Type: "ECS"
+            CapacityProviderStrategy: 
+              - 
+                CapacityProvider: "FARGATE"
+                Weight: 1
+                Base: 0
+
+    ECSTaskDefinition:
+        Type: "AWS::ECS::TaskDefinition"
+        Properties:
+            ContainerDefinitions: 
+              - 
+                Environment: 
+                  - 
+                    Name: "OS_PASS"
+                    Value: "hLZ5&3GUr!7&"
+                  - 
+                    Name: "SQS_QUEUE_URL"
+                    Value: !Sub "https://sqs.${AWS::Region}.amazonaws.com/${AWS::AccountId}/${SQSQueue7.QueueName}"
+                  - 
+                    Name: "OPENSEARCH_HOST"
+                    Value: !Sub "https://vpc-${OpenSearchServiceDomain}-2rkahjq7f6mxwsgkqd5tkjbvlm.${AWS::Region}.es.amazonaws.com"
+                  - 
+                    Name: "OS_USER"
+                    Value: "testinguser3219"
+                Essential: true
+                Image: "public.ecr.aws/p1q6v2t5/vector-embedding-worker:latest"
+                LogConfiguration: 
+                    LogDriver: "awslogs"
+                    Options: 
+                        awslogs-group: "/ecs/vector-embedding-task"
+                        awslogs-create-group: "true"
+                        awslogs-region: !Ref AWS::Region
+                        awslogs-stream-prefix: "ecs"
+                Name: "vector-embedding-worker"
+            Family: "vector-embedding-task"
+            TaskRoleArn: !GetAtt IAMRole22.Arn
+            ExecutionRoleArn: !GetAtt IAMRole22.Arn
+            NetworkMode: "awsvpc"
+            RequiresCompatibilities: 
+              - "FARGATE"
+            Cpu: "1024"
+            Memory: "3072"
+
+    ECSTaskDefinition2:
+        Type: "AWS::ECS::TaskDefinition"
+        Properties:
+            ContainerDefinitions: 
+              - 
+                Environment: 
+                  - 
+                    Name: "SQS_QUEUE_URL"
+                    Value: !Sub "https://sqs.${AWS::Region}.amazonaws.com/${AWS::AccountId}/${SQSQueue6.QueueName}"
+                Essential: true
+                Image: "public.ecr.aws/p1q6v2t5/semantic-chunking-worker:latest"
+                LogConfiguration: 
+                    LogDriver: "awslogs"
+                    Options: 
+                        awslogs-group: "/ecs/semantic-chunking-task"
+                        awslogs-create-group: "true"
+                        awslogs-region: !Ref AWS::Region
+                        awslogs-stream-prefix: "ecs"
+                Name: "semantic-chunking-worker"
+            Family: "semantic-chunking-task"
+            TaskRoleArn: !GetAtt IAMRole22.Arn
+            ExecutionRoleArn: !GetAtt IAMRole22.Arn
+            NetworkMode: "awsvpc"
+            RequiresCompatibilities: 
+              - "FARGATE"
+            Cpu: "1024"
+            Memory: "3072"
+
+    ECSTaskDefinition3:
+        Type: "AWS::ECS::TaskDefinition"
+        Properties:
+            ContainerDefinitions: 
+              - 
+                Environment: 
+                  - 
+                    Name: "OUTPUT_BUCKET"
+                    Value: !Ref S3Bucket4
+                  - 
+                    Name: "SQS_QUEUE_URL"
+                    Value: !Sub "https://sqs.${AWS::Region}.amazonaws.com/${AWS::AccountId}/${SQSQueue3.QueueName}"
+                Essential: true
+                Image: !Sub "${AWS::AccountId}.dkr.ecr.${AWS::Region}.amazonaws.com/ocr-image-processing-worker:latest"
+                LogConfiguration: 
+                    LogDriver: "awslogs"
+                    Options: 
+                        awslogs-group: "/ecs/image-to-text-task"
+                        awslogs-create-group: "true"
+                        awslogs-region: !Ref AWS::Region
+                        awslogs-stream-prefix: "ecs"
+                Name: "ocr-image-processing-worker"
+            Family: "image-to-text-task"
+            TaskRoleArn: !GetAtt IAMRole22.Arn
+            ExecutionRoleArn: !GetAtt IAMRole22.Arn
+            NetworkMode: "awsvpc"
+            RequiresCompatibilities: 
+              - "FARGATE"
+            Cpu: "1024"
+            Memory: "3072"
+
+    ECSTaskDefinition4:
+        Type: "AWS::ECS::TaskDefinition"
+        Properties:
+            ContainerDefinitions: 
+              - 
+                Environment: 
+                  - 
+                    Name: "OUTPUT_BUCKET"
+                    Value: !Ref S3Bucket4
+                  - 
+                    Name: "SQS_QUEUE_URL"
+                    Value: !Sub "https://sqs.${AWS::Region}.amazonaws.com/${AWS::AccountId}/${SQSQueue2.QueueName}"
+                Essential: true
+                Image: !Sub "${AWS::AccountId}.dkr.ecr.${AWS::Region}.amazonaws.com/docx-to-html-worker"
+                LogConfiguration: 
+                    LogDriver: "awslogs"
+                    Options: 
+                        awslogs-group: "/ecs/docx-to-htmk-task"
+                        awslogs-create-group: "true"
+                        awslogs-region: !Ref AWS::Region
+                        awslogs-stream-prefix: "ecs"
+                Name: "docx-to-html-worker"
+            Family: "docx-to-htmk-task"
+            TaskRoleArn: !GetAtt IAMRole22.Arn
+            ExecutionRoleArn: !GetAtt IAMRole22.Arn
+            NetworkMode: "awsvpc"
+            RequiresCompatibilities: 
+              - "FARGATE"
+            Cpu: "1024"
+            Memory: "2048"
+
     S3Bucket:
+        Type: "AWS::S3::Bucket"
+        Properties:
+            BucketName: "amplify-d1m1jfdu9315t1-ma-amplifydataamplifycodege-f6eg7ywwlrer"
+            Tags: 
+              - 
+                Key: "amplify:branch-name"
+                Value: "main"
+              - 
+                Key: "aws-cdk:cr-owned:fe9654cf"
+                Value: "true"
+              - 
+                Key: "aws:cloudformation:stack-name"
+                Value: "amplify-d1m1jfdu9315t1-main-branch-fd738d4208-data7552DF31-15DRKRBW2FP70"
+              - 
+                Key: "aws:cloudformation:stack-id"
+                Value: !Sub "arn:aws:cloudformation:${AWS::Region}:${AWS::AccountId}:stack/amplify-d1m1jfdu9315t1-main-branch-fd738d4208-data7552DF31-15DRKRBW2FP70/0afcb490-6647-11f0-bcea-0affeec97801"
+              - 
+                Key: "amplify:deployment-type"
+                Value: "branch"
+              - 
+                Key: "amplify:friendly-name"
+                Value: "amplifyData"
+              - 
+                Key: "aws:cloudformation:logical-id"
+                Value: "amplifyDataAmplifyCodegenAssetsAmplifyCodegenAssetsBucket9CCB4ACA"
+              - 
+                Key: "amplify:app-id"
+                Value: "d1m1jfdu9315t1"
+              - 
+                Key: "created-by"
+                Value: "amplify"
+              - 
+                Key: "aws-cdk:auto-delete-objects"
+                Value: "true"
+            BucketEncryption: 
+                ServerSideEncryptionConfiguration: 
+                  - 
+                    ServerSideEncryptionByDefault: 
+                        SSEAlgorithm: "AES256"
+                    BucketKeyEnabled: false
+            CorsConfiguration: 
+                CorsRules: 
+                  - 
+                    AllowedHeaders: 
+                      - "*"
+                    AllowedMethods: 
+                      - "GET"
+                      - "HEAD"
+                    AllowedOrigins: 
+                      - !Sub "https://${AWS::Region}.console.aws.amazon.com/amplify"
+            OwnershipControls: 
+                Rules: 
+                  - 
+                    ObjectOwnership: "BucketOwnerEnforced"
+            PublicAccessBlockConfiguration: 
+                BlockPublicAcls: true
+                BlockPublicPolicy: true
+                IgnorePublicAcls: true
+                RestrictPublicBuckets: true
+
+    S3Bucket2:
+        Type: "AWS::S3::Bucket"
+        Properties:
+            BucketName: !Sub "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
+            Tags: 
+              - 
+                Key: "aws:cloudformation:stack-id"
+                Value: !Sub "arn:aws:cloudformation:${AWS::Region}:${AWS::AccountId}:stack/CDKToolkit/2aa62200-6646-11f0-8150-0e57c9c9b893"
+              - 
+                Key: "aws:cloudformation:stack-name"
+                Value: "CDKToolkit"
+              - 
+                Key: "aws:cloudformation:logical-id"
+                Value: "StagingBucket"
+            BucketEncryption: 
+                ServerSideEncryptionConfiguration: 
+                  - 
+                    ServerSideEncryptionByDefault: 
+                        SSEAlgorithm: "aws:kms"
+                    BucketKeyEnabled: false
+            LifecycleConfiguration: 
+                Rules: 
+                  - 
+                    Id: "CleanupOldVersions"
+                    Status: "Enabled"
+                    NoncurrentVersionExpirationInDays: 30
+                  - 
+                    AbortIncompleteMultipartUpload: 
+                        DaysAfterInitiation: 1
+                    Id: "AbortIncompleteMultipartUploads"
+                    Status: "Enabled"
+            VersioningConfiguration: 
+                Status: "Enabled"
+            OwnershipControls: 
+                Rules: 
+                  - 
+                    ObjectOwnership: "BucketOwnerEnforced"
+            PublicAccessBlockConfiguration: 
+                BlockPublicAcls: true
+                BlockPublicPolicy: true
+                IgnorePublicAcls: true
+                RestrictPublicBuckets: true
+
+    S3Bucket3:
+        Type: "AWS::S3::Bucket"
+        Properties:
+            BucketName: "amplify-d1m1jfdu9315t1-ma-modelintrospectionschema-klndxdcrjbma"
+            Tags: 
+              - 
+                Key: "amplify:branch-name"
+                Value: "main"
+              - 
+                Key: "aws:cloudformation:stack-name"
+                Value: "amplify-d1m1jfdu9315t1-main-branch-fd738d4208-data7552DF31-15DRKRBW2FP70"
+              - 
+                Key: "aws:cloudformation:stack-id"
+                Value: !Sub "arn:aws:cloudformation:${AWS::Region}:${AWS::AccountId}:stack/amplify-d1m1jfdu9315t1-main-branch-fd738d4208-data7552DF31-15DRKRBW2FP70/0afcb490-6647-11f0-bcea-0affeec97801"
+              - 
+                Key: "amplify:deployment-type"
+                Value: "branch"
+              - 
+                Key: "aws-cdk:cr-owned:f5410c88"
+                Value: "true"
+              - 
+                Key: "aws:cloudformation:logical-id"
+                Value: "modelIntrospectionSchemaBucketF566B665"
+              - 
+                Key: "amplify:app-id"
+                Value: "d1m1jfdu9315t1"
+              - 
+                Key: "created-by"
+                Value: "amplify"
+              - 
+                Key: "aws-cdk:auto-delete-objects"
+                Value: "true"
+            BucketEncryption: 
+                ServerSideEncryptionConfiguration: 
+                  - 
+                    ServerSideEncryptionByDefault: 
+                        SSEAlgorithm: "AES256"
+                    BucketKeyEnabled: false
+            OwnershipControls: 
+                Rules: 
+                  - 
+                    ObjectOwnership: "BucketOwnerEnforced"
+            PublicAccessBlockConfiguration: 
+                BlockPublicAcls: true
+                BlockPublicPolicy: true
+                IgnorePublicAcls: true
+                RestrictPublicBuckets: true
+
+    S3Bucket4:
+        Type: "AWS::S3::Bucket"
+        Properties:
+            BucketName: "intermediate-outputs-bucket"
+            BucketEncryption: 
+                ServerSideEncryptionConfiguration: 
+                  - 
+                    ServerSideEncryptionByDefault: 
+                        SSEAlgorithm: "AES256"
+                    BucketKeyEnabled: true
+            NotificationConfiguration: 
+                QueueConfigurations: 
+                  - 
+                    Event: "s3:ObjectCreated:*"
+                    Filter: 
+                        S3Key: 
+                            Rules: 
+                              - 
+                                Name: "Prefix"
+                                Value: "uploads/"
+                    Queue: !Ref SQSQueue6
+                  - 
+                    Event: "s3:ObjectCreated:*"
+                    Filter: 
+                        S3Key: 
+                            Rules: 
+                              - 
+                                Name: "Prefix"
+                                Value: "semantic-chunks/"
+                              - 
+                                Name: "Suffix"
+                                Value: ""
+                    Queue: !Ref SQSQueue7
+            OwnershipControls: 
+                Rules: 
+                  - 
+                    ObjectOwnership: "BucketOwnerEnforced"
+            PublicAccessBlockConfiguration: 
+                BlockPublicAcls: true
+                BlockPublicPolicy: true
+                IgnorePublicAcls: true
+                RestrictPublicBuckets: true
+
+    S3Bucket5:
+        Type: "AWS::S3::Bucket"
+        Properties:
+            BucketName: "amplify-frontendapp-henry-amplifydataamplifycodege-gxmltjpy39ef"
+            Tags: 
+              - 
+                Key: "aws:cloudformation:stack-name"
+                Value: "amplify-frontendapp-henryng101-sandbox-7b812204ff-data7552DF31-44PX0RUCLDGP"
+              - 
+                Key: "aws:cloudformation:stack-id"
+                Value: !Sub "arn:aws:cloudformation:${AWS::Region}:${AWS::AccountId}:stack/amplify-frontendapp-henryng101-sandbox-7b812204ff-data7552DF31-44PX0RUCLDGP/331fc8e0-6660-11f0-b799-12c7425fda01"
+              - 
+                Key: "amplify:deployment-type"
+                Value: "sandbox"
+              - 
+                Key: "amplify:friendly-name"
+                Value: "amplifyData"
+              - 
+                Key: "aws-cdk:cr-owned:e963377c"
+                Value: "true"
+              - 
+                Key: "aws:cloudformation:logical-id"
+                Value: "amplifyDataAmplifyCodegenAssetsAmplifyCodegenAssetsBucket9CCB4ACA"
+              - 
+                Key: "created-by"
+                Value: "amplify"
+              - 
+                Key: "aws-cdk:auto-delete-objects"
+                Value: "true"
+            BucketEncryption: 
+                ServerSideEncryptionConfiguration: 
+                  - 
+                    ServerSideEncryptionByDefault: 
+                        SSEAlgorithm: "AES256"
+                    BucketKeyEnabled: false
+            CorsConfiguration: 
+                CorsRules: 
+                  - 
+                    AllowedHeaders: 
+                      - "*"
+                    AllowedMethods: 
+                      - "GET"
+                      - "HEAD"
+                    AllowedOrigins: 
+                      - !Sub "https://${AWS::Region}.console.aws.amazon.com/amplify"
+            OwnershipControls: 
+                Rules: 
+                  - 
+                    ObjectOwnership: "BucketOwnerEnforced"
+            PublicAccessBlockConfiguration: 
+                BlockPublicAcls: true
+                BlockPublicPolicy: true
+                IgnorePublicAcls: true
+                RestrictPublicBuckets: true
+
+    S3Bucket6:
+        Type: "AWS::S3::Bucket"
+        Properties:
+            BucketName: "amplify-frontendapp-henry-modelintrospectionschema-ninxtkwjekev"
+            Tags: 
+              - 
+                Key: "aws:cloudformation:stack-name"
+                Value: "amplify-frontendapp-henryng101-sandbox-7b812204ff-data7552DF31-44PX0RUCLDGP"
+              - 
+                Key: "aws-cdk:cr-owned:dc47d50c"
+                Value: "true"
+              - 
+                Key: "aws:cloudformation:stack-id"
+                Value: !Sub "arn:aws:cloudformation:${AWS::Region}:${AWS::AccountId}:stack/amplify-frontendapp-henryng101-sandbox-7b812204ff-data7552DF31-44PX0RUCLDGP/331fc8e0-6660-11f0-b799-12c7425fda01"
+              - 
+                Key: "amplify:deployment-type"
+                Value: "sandbox"
+              - 
+                Key: "aws:cloudformation:logical-id"
+                Value: "modelIntrospectionSchemaBucketF566B665"
+              - 
+                Key: "created-by"
+                Value: "amplify"
+              - 
+                Key: "aws-cdk:auto-delete-objects"
+                Value: "true"
+            BucketEncryption: 
+                ServerSideEncryptionConfiguration: 
+                  - 
+                    ServerSideEncryptionByDefault: 
+                        SSEAlgorithm: "AES256"
+                    BucketKeyEnabled: false
+            OwnershipControls: 
+                Rules: 
+                  - 
+                    ObjectOwnership: "BucketOwnerEnforced"
+            PublicAccessBlockConfiguration: 
+                BlockPublicAcls: true
+                BlockPublicPolicy: true
+                IgnorePublicAcls: true
+                RestrictPublicBuckets: true
+
+    S3Bucket7:
         Type: "AWS::S3::Bucket"
         Properties:
             BucketName: "my-llm-upload"
@@ -34,7 +1088,7 @@ Resources:
                               - 
                                 Name: "Suffix"
                                 Value: ""
-                    Function: !GetAtt LambdaFunction2.Arn
+                    Function: !GetAtt LambdaFunction9.Arn
             OwnershipControls: 
                 Rules: 
                   - 
@@ -45,39 +1099,136 @@ Resources:
                 IgnorePublicAcls: true
                 RestrictPublicBuckets: true
 
-    S3Bucket2:
-        Type: "AWS::S3::Bucket"
+    S3BucketPolicy:
+        Type: "AWS::S3::BucketPolicy"
         Properties:
-            BucketName: "intermediate-outputs-bucket"
-            BucketEncryption: 
-                ServerSideEncryptionConfiguration: 
+            Bucket: !Ref S3Bucket
+            PolicyDocument: 
+                Version: "2012-10-17"
+                Statement: 
                   - 
-                    ServerSideEncryptionByDefault: 
-                        SSEAlgorithm: "AES256"
-                    BucketKeyEnabled: true
-            NotificationConfiguration: 
-                QueueConfigurations: 
+                    Effect: "Allow"
+                    Principal: 
+                        AWS: !GetAtt IAMRole8.Arn
+                    Action: 
+                      - "s3:PutBucketPolicy"
+                      - "s3:GetBucket*"
+                      - "s3:List*"
+                      - "s3:DeleteObject*"
+                    Resource: 
+                      - !Sub "arn:aws:s3:::${S3Bucket}"
+                      - !Sub "arn:aws:s3:::${S3Bucket}/*"
+
+    S3BucketPolicy2:
+        Type: "AWS::S3::BucketPolicy"
+        Properties:
+            Bucket: !Ref S3Bucket2
+            PolicyDocument: 
+                Version: "2012-10-17"
+                Id: "AccessControl"
+                Statement: 
                   - 
-                    Event: "s3:ObjectCreated:*"
-                    Filter: 
-                        S3Key: 
-                            Rules: 
-                              - 
-                                Name: "Prefix"
-                                Value: ""
-                              - 
-                                Name: "Suffix"
-                                Value: ""
-                    Queue: !Ref SQSQueue6
-            OwnershipControls: 
-                Rules: 
+                    Sid: "AllowSSLRequestsOnly"
+                    Effect: "Deny"
+                    Principal: "*"
+                    Action: "s3:*"
+                    Resource: 
+                      - !Sub "arn:aws:s3:::${S3Bucket2}"
+                      - !Sub "arn:aws:s3:::${S3Bucket2}/*"
+                    Condition: 
+                        Bool: 
+                            "aws:SecureTransport": "false"
+
+    S3BucketPolicy3:
+        Type: "AWS::S3::BucketPolicy"
+        Properties:
+            Bucket: !Ref S3Bucket5
+            PolicyDocument: 
+                Version: "2012-10-17"
+                Statement: 
                   - 
-                    ObjectOwnership: "BucketOwnerEnforced"
-            PublicAccessBlockConfiguration: 
-                BlockPublicAcls: true
-                BlockPublicPolicy: true
-                IgnorePublicAcls: true
-                RestrictPublicBuckets: true
+                    Effect: "Allow"
+                    Principal: 
+                        AWS: !GetAtt IAMRole13.Arn
+                    Action: 
+                      - "s3:PutBucketPolicy"
+                      - "s3:GetBucket*"
+                      - "s3:List*"
+                      - "s3:DeleteObject*"
+                    Resource: 
+                      - !Sub "arn:aws:s3:::${S3Bucket5}"
+                      - !Sub "arn:aws:s3:::${S3Bucket5}/*"
+
+    S3BucketPolicy4:
+        Type: "AWS::S3::BucketPolicy"
+        Properties:
+            Bucket: !Ref S3Bucket3
+            PolicyDocument: 
+                Version: "2012-10-17"
+                Statement: 
+                  - 
+                    Effect: "Deny"
+                    Principal: 
+                        AWS: "*"
+                    Action: "s3:*"
+                    Resource: 
+                      - !Sub "arn:aws:s3:::${S3Bucket3}"
+                      - !Sub "arn:aws:s3:::${S3Bucket3}/*"
+                    Condition: 
+                        Bool: 
+                            "aws:SecureTransport": "false"
+                  - 
+                    Effect: "Allow"
+                    Principal: 
+                        AWS: !GetAtt IAMRole8.Arn
+                    Action: 
+                      - "s3:PutBucketPolicy"
+                      - "s3:GetBucket*"
+                      - "s3:List*"
+                      - "s3:DeleteObject*"
+                    Resource: 
+                      - !Sub "arn:aws:s3:::${S3Bucket3}"
+                      - !Sub "arn:aws:s3:::${S3Bucket3}/*"
+
+    S3BucketPolicy5:
+        Type: "AWS::S3::BucketPolicy"
+        Properties:
+            Bucket: !Ref S3Bucket6
+            PolicyDocument: 
+                Version: "2012-10-17"
+                Statement: 
+                  - 
+                    Effect: "Deny"
+                    Principal: 
+                        AWS: "*"
+                    Action: "s3:*"
+                    Resource: 
+                      - !Sub "arn:aws:s3:::${S3Bucket6}"
+                      - !Sub "arn:aws:s3:::${S3Bucket6}/*"
+                    Condition: 
+                        Bool: 
+                            "aws:SecureTransport": "false"
+                  - 
+                    Effect: "Allow"
+                    Principal: 
+                        AWS: !GetAtt IAMRole13.Arn
+                    Action: 
+                      - "s3:PutBucketPolicy"
+                      - "s3:GetBucket*"
+                      - "s3:List*"
+                      - "s3:DeleteObject*"
+                    Resource: 
+                      - !Sub "arn:aws:s3:::${S3Bucket6}"
+                      - !Sub "arn:aws:s3:::${S3Bucket6}/*"
+
+    S3StorageLens:
+        Type: "AWS::S3::StorageLens"
+        Properties:
+            StorageLensConfiguration: 
+                AccountLevel: 
+                    BucketLevel: {}
+                Id: !Sub "${IAMPolicy9}-account-dashboard"
+                IsEnabled: true
 
     DynamoDBTable:
         Type: "AWS::DynamoDB::Table"
@@ -93,59 +1244,63 @@ Resources:
                 AttributeName: "FileID"
                 KeyType: "HASH"
 
-    LambdaFunction:
-        Type: "AWS::Lambda::Function"
+    DynamoDBTable2:
+        Type: "AWS::DynamoDB::Table"
         Properties:
-            Description: ""
-            Environment: 
-                Variables: 
-                    DDB_TABLE_NAME: !Ref DynamoDBTable
-                    BUCKET_NAME: !Ref S3Bucket
-            FunctionName: "QueryFunction"
-            Handler: "lambda_function.lambda_handler"
-            Architectures: 
-              - "x86_64"
-            Code: 
-                S3Bucket: "prod-04-2014-tasks"
-                S3Key: "/snapshots/090081990755/QueryFunction-c442f707-e822-4c1c-a898-6c3c4f82be25"
-                S3ObjectVersion: "ic1PlhhBGBxuDjgHDO6nh_oH8CEpsXYz"
-            MemorySize: 128
-            Role: "arn:aws:iam::090081990755:role/service-role/QueryFunction-role-cdtyie8o"
-            Runtime: "python3.13"
-            Timeout: 3
-            TracingConfig: 
-                Mode: "PassThrough"
-            EphemeralStorage: 
-                Size: 512
+            AttributeDefinitions: 
+              - 
+                AttributeName: "id"
+                AttributeType: "S"
+            BillingMode: "PAY_PER_REQUEST"
+            TableName: "Todo-xljhlue7hbduli5pqywh6saju4-NONE"
+            Tags: 
+              - 
+                Key: "amplify:branch-name"
+                Value: "main"
+              - 
+                Key: "amplify:deployment-type"
+                Value: "branch"
+              - 
+                Key: "amplify:friendly-name"
+                Value: "amplifyData"
+              - 
+                Key: "amplify:app-id"
+                Value: "d1m1jfdu9315t1"
+              - 
+                Key: "created-by"
+                Value: "amplify"
+            KeySchema: 
+              - 
+                AttributeName: "id"
+                KeyType: "HASH"
+            StreamSpecification: 
+                StreamViewType: "NEW_AND_OLD_IMAGES"
 
-    LambdaFunction2:
-        Type: "AWS::Lambda::Function"
+    DynamoDBTable3:
+        Type: "AWS::DynamoDB::Table"
         Properties:
-            Description: ""
-            Environment: 
-                Variables: 
-                    DOCX_QUEUE_URL: !Sub "https://sqs.${AWS::Region}.amazonaws.com/090081990755/${SQSQueue.QueueName}"
-                    EXCEL_QUEUE_URL: !Sub "https://sqs.${AWS::Region}.amazonaws.com/090081990755/${SQSQueue2.QueueName}"
-                    PDF_QUEUE_URL: !Sub "https://sqs.${AWS::Region}.amazonaws.com/090081990755/${SQSQueue5.QueueName}"
-                    IMAGE_QUEUE_URL: !Sub "https://sqs.${AWS::Region}.amazonaws.com/090081990755/${SQSQueue3.QueueName}"
-            FunctionName: "RouteFileTypeFunction"
-            Handler: "lambda_function.lambda_handler"
-            Architectures: 
-              - "x86_64"
-            Code: 
-                S3Bucket: "prod-04-2014-tasks"
-                S3Key: "/snapshots/090081990755/RouteFileTypeFunction-1c5a4ea6-0d16-42df-921a-bd6e0287b68b"
-                S3ObjectVersion: "gNsrd3E2qEpvh7vOCsGs0UOOWeH4yTcp"
-            MemorySize: 128
-            Role: "arn:aws:iam::090081990755:role/service-role/RouteFileTypeFunction-role-2epkr4mi"
-            Runtime: "python3.13"
-            Timeout: 3
-            TracingConfig: 
-                Mode: "PassThrough"
-            Layers: 
-              - !Sub "arn:aws:lambda:${AWS::Region}:090081990755:layer:filetypeLayer:1"
-            EphemeralStorage: 
-                Size: 512
+            AttributeDefinitions: 
+              - 
+                AttributeName: "id"
+                AttributeType: "S"
+            BillingMode: "PAY_PER_REQUEST"
+            TableName: "Todo-omfnupyukzerhnv6ip3hntzqky-NONE"
+            Tags: 
+              - 
+                Key: "amplify:deployment-type"
+                Value: "sandbox"
+              - 
+                Key: "amplify:friendly-name"
+                Value: "amplifyData"
+              - 
+                Key: "created-by"
+                Value: "amplify"
+            KeySchema: 
+              - 
+                AttributeName: "id"
+                KeyType: "HASH"
+            StreamSpecification: 
+                StreamViewType: "NEW_AND_OLD_IMAGES"
 
     ApiGatewayRestApi:
         Type: "AWS::ApiGateway::RestApi"
@@ -157,13 +1312,879 @@ Resources:
                 Types: 
                   - "REGIONAL"
 
+    ApiGatewayMethod:
+        Type: "AWS::ApiGateway::Method"
+        Properties:
+            RestApiId: !Ref ApiGatewayRestApi
+            ResourceId: "isheccbzp2"
+            HttpMethod: "GET"
+            AuthorizationType: "NONE"
+            ApiKeyRequired: false
+            RequestParameters: {}
+            RequestModels: {}
+            MethodResponses: 
+              - 
+                ResponseModels: 
+                    "application/json": !Ref ApiGatewayModel2
+                StatusCode: "200"
+            Integration: 
+                CacheNamespace: "isheccbzp2"
+                ContentHandling: "CONVERT_TO_TEXT"
+                IntegrationHttpMethod: "POST"
+                IntegrationResponses: 
+                  - 
+                    ResponseTemplates: {}
+                    StatusCode: "200"
+                PassthroughBehavior: "WHEN_NO_MATCH"
+                TimeoutInMillis: 29000
+                Type: "AWS_PROXY"
+                Uri: !Sub "arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/arn:aws:lambda:${AWS::Region}:${AWS::AccountId}:function:${LambdaFunction10}/invocations"
+
+    ApiGatewayModel:
+        Type: "AWS::ApiGateway::Model"
+        Properties:
+            RestApiId: !Ref ApiGatewayRestApi
+            Name: "Error"
+            Description: !Sub "This is a ${IAMPolicy9} error schema model"
+            Schema: |
+                {
+                  "$schema" : "http://json-schema.org/draft-04/schema#",
+                  "title" : "Error Schema",
+                  "type" : "object",
+                  "properties" : {
+                    "message" : { "type" : "string" }
+                  }
+                }
+            ContentType: "application/json"
+
+    ApiGatewayModel2:
+        Type: "AWS::ApiGateway::Model"
+        Properties:
+            RestApiId: !Ref ApiGatewayRestApi
+            Name: "Empty"
+            Description: !Sub "This is a ${IAMPolicy9} empty schema model"
+            Schema: |
+                {
+                  "$schema": "http://json-schema.org/draft-04/schema#",
+                  "title" : "Empty Schema",
+                  "type" : "object"
+                }
+            ContentType: "application/json"
+
+    LogsLogGroup:
+        Type: "AWS::Logs::LogGroup"
+        Properties:
+            LogGroupName: "/aws/amplify/d1m1jfdu9315t1"
+
+    LogsLogGroup2:
+        Type: "AWS::Logs::LogGroup"
+        Properties:
+            LogGroupName: !Sub "/aws/lambda/${LambdaFunction10}"
+
+    LogsLogGroup3:
+        Type: "AWS::Logs::LogGroup"
+        Properties:
+            LogGroupName: !Sub "/aws/lambda/${LambdaFunction9}"
+
+    LogsLogGroup4:
+        Type: "AWS::Logs::LogGroup"
+        Properties:
+            LogGroupName: !Sub "/aws/lambda/${LambdaFunction2}"
+
+    LogsLogGroup5:
+        Type: "AWS::Logs::LogGroup"
+        Properties:
+            LogGroupName: !Sub "/aws/lambda/${LambdaFunction7}"
+
+    LogsLogGroup6:
+        Type: "AWS::Logs::LogGroup"
+        Properties:
+            LogGroupName: !Sub "/aws/lambda/${LambdaFunction12}"
+
+    LogsLogGroup7:
+        Type: "AWS::Logs::LogGroup"
+        Properties:
+            LogGroupName: !Sub "/aws/lambda/${LambdaFunction5}"
+
+    LogsLogGroup8:
+        Type: "AWS::Logs::LogGroup"
+        Properties:
+            LogGroupName: !Sub "/aws/lambda/${LambdaFunction6}"
+
+    LogsLogGroup9:
+        Type: "AWS::Logs::LogGroup"
+        Properties:
+            LogGroupName: !Sub "/aws/lambda/${LambdaFunction11}"
+
+    LogsLogGroup10:
+        Type: "AWS::Logs::LogGroup"
+        Properties:
+            LogGroupName: !Sub "/aws/lambda/${LambdaFunction8}"
+
+    LogsLogGroup11:
+        Type: "AWS::Logs::LogGroup"
+        Properties:
+            LogGroupName: !Sub "/aws/lambda/${LambdaFunction3}"
+
+    LogsLogGroup12:
+        Type: "AWS::Logs::LogGroup"
+        Properties:
+            LogGroupName: !Sub "/aws/lambda/${LambdaFunction}"
+
+    LogsLogGroup13:
+        Type: "AWS::Logs::LogGroup"
+        Properties:
+            LogGroupName: !Sub "/aws/lambda/${LambdaFunction4}"
+
+    LogsLogGroup14:
+        Type: "AWS::Logs::LogGroup"
+        Properties:
+            LogGroupName: "/ecs/docx-to-htmk-task"
+
+    LogsLogGroup15:
+        Type: "AWS::Logs::LogGroup"
+        Properties:
+            LogGroupName: "/ecs/image-to-text-task"
+
+    LogsLogGroup16:
+        Type: "AWS::Logs::LogGroup"
+        Properties:
+            LogGroupName: "/ecs/semantic-chunking-task"
+
+    LogsLogGroup17:
+        Type: "AWS::Logs::LogGroup"
+        Properties:
+            LogGroupName: "/ecs/vector-embedding-task"
+
+    LogsLogStream:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: "/aws/amplify/d1m1jfdu9315t1"
+            LogStreamName: "main/2025/07/21/1f162b12b7e940648ff45698f533ef44"
+
+    LogsLogStream2:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: "/aws/amplify/d1m1jfdu9315t1"
+            LogStreamName: "main/2025/07/21/69c16f7a138f41719d57ec988a7cbb1a"
+
+    LogsLogStream3:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: "/aws/amplify/d1m1jfdu9315t1"
+            LogStreamName: "main/2025/07/21/a2ed1da6151240d49b72fcc33f838dcd"
+
+    LogsLogStream4:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: "/aws/amplify/d1m1jfdu9315t1"
+            LogStreamName: "main/2025/07/22/9d8c71dc3201409cad02c060031ad8b5"
+
+    LogsLogStream5:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: "/aws/amplify/d1m1jfdu9315t1"
+            LogStreamName: "main/2025/07/23/3fb705b76ba34f7e89277b816ff7bbf6"
+
+    LogsLogStream6:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: "/aws/amplify/d1m1jfdu9315t1"
+            LogStreamName: "main/2025/07/23/a70bd0eccc9c4845a0c9dbde380d69e3"
+
+    LogsLogStream7:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: "/aws/amplify/d1m1jfdu9315t1"
+            LogStreamName: "main/2025/07/23/d23a62410b784dee8ad7266f87d81625"
+
+    LogsLogStream8:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: "/aws/amplify/d1m1jfdu9315t1"
+            LogStreamName: "main/2025/07/23/e5a4e26fc4504b49b296c62081178145"
+
+    LogsLogStream9:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: "/aws/amplify/d1m1jfdu9315t1"
+            LogStreamName: "main/2025/07/24/38c0910232f340e796092c8c2028f60a"
+
+    LogsLogStream10:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: "/aws/amplify/d1m1jfdu9315t1"
+            LogStreamName: "main/2025/07/24/cecfed9986704ee8ae26dbed112e7867"
+
+    LogsLogStream11:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: "/aws/amplify/d1m1jfdu9315t1"
+            LogStreamName: "main/2025/07/25/c4d6f09c7fac416f8359988404140f0e"
+
+    LogsLogStream12:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: "/aws/amplify/d1m1jfdu9315t1"
+            LogStreamName: "main/2025/07/27/1bb9fb6be1e44525815611bd4011b8e3"
+
+    LogsLogStream13:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: "/aws/amplify/d1m1jfdu9315t1"
+            LogStreamName: "main/2025/07/27/1d44ec490e624b879d1ea53087e091aa"
+
+    LogsLogStream14:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: "/aws/amplify/d1m1jfdu9315t1"
+            LogStreamName: "main/2025/07/27/2bf94f0c1a984e2aa3880bea005aa6e0"
+
+    LogsLogStream15:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: "/aws/amplify/d1m1jfdu9315t1"
+            LogStreamName: "main/2025/07/27/671c27b8eda14ebb818b1f486f90e4ce"
+
+    LogsLogStream16:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: !Sub "/aws/lambda/${LambdaFunction10}"
+            LogStreamName: "2025/07/10/[$LATEST]16ddfe4b9d4b4e868c13f81b35b5ad89"
+
+    LogsLogStream17:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: !Sub "/aws/lambda/${LambdaFunction10}"
+            LogStreamName: "2025/07/10/[$LATEST]26018f85ed304a8285cba2f434091074"
+
+    LogsLogStream18:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: !Sub "/aws/lambda/${LambdaFunction10}"
+            LogStreamName: "2025/07/10/[$LATEST]2727f9e57b174f628412d865330008a3"
+
+    LogsLogStream19:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: !Sub "/aws/lambda/${LambdaFunction10}"
+            LogStreamName: "2025/07/10/[$LATEST]33fddc6c488943d1ad88520296ffa73e"
+
+    LogsLogStream20:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: !Sub "/aws/lambda/${LambdaFunction10}"
+            LogStreamName: "2025/07/10/[$LATEST]436c9465ba194cf0b7eb4c5974c02174"
+
+    LogsLogStream21:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: !Sub "/aws/lambda/${LambdaFunction10}"
+            LogStreamName: "2025/07/10/[$LATEST]436e8e666b5e41a7850d3d0f316ad65a"
+
+    LogsLogStream22:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: !Sub "/aws/lambda/${LambdaFunction10}"
+            LogStreamName: "2025/07/10/[$LATEST]49860021df644a8faf6c338ddfce4ef8"
+
+    LogsLogStream23:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: !Sub "/aws/lambda/${LambdaFunction10}"
+            LogStreamName: "2025/07/10/[$LATEST]513fe880266748b0924876151974b17c"
+
+    LogsLogStream24:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: !Sub "/aws/lambda/${LambdaFunction10}"
+            LogStreamName: "2025/07/10/[$LATEST]5df775bb816b434cbe2201ef6531e173"
+
+    LogsLogStream25:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: !Sub "/aws/lambda/${LambdaFunction10}"
+            LogStreamName: "2025/07/10/[$LATEST]7615d052b4de4517bdaaad7b53dd9dc2"
+
+    LogsLogStream26:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: !Sub "/aws/lambda/${LambdaFunction10}"
+            LogStreamName: "2025/07/10/[$LATEST]a0d24bbd72ec42ea9bc82ee5adeae49a"
+
+    LogsLogStream27:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: !Sub "/aws/lambda/${LambdaFunction10}"
+            LogStreamName: "2025/07/10/[$LATEST]c448ea1a8ce64695ae2c73eda9eb2bc1"
+
+    LogsLogStream28:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: !Sub "/aws/lambda/${LambdaFunction10}"
+            LogStreamName: "2025/07/10/[$LATEST]d43c0b63887b4fdf83f38a13d6a840e8"
+
+    LogsLogStream29:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: !Sub "/aws/lambda/${LambdaFunction10}"
+            LogStreamName: "2025/07/10/[$LATEST]e7cc64fc27074e3ba7f27a184c9c005c"
+
+    LogsLogStream30:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: !Sub "/aws/lambda/${LambdaFunction10}"
+            LogStreamName: "2025/07/10/[$LATEST]eb63e2ea4b034646971d7c0dd4727af3"
+
+    LogsLogStream31:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: !Sub "/aws/lambda/${LambdaFunction10}"
+            LogStreamName: "2025/07/10/[$LATEST]ef89ba42508c4e3bb748803712233a0c"
+
+    LogsLogStream32:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: !Sub "/aws/lambda/${LambdaFunction10}"
+            LogStreamName: "2025/07/10/[$LATEST]fbbe9aa18a2f42cdb00aed08a1d464de"
+
+    LogsLogStream33:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: !Sub "/aws/lambda/${LambdaFunction10}"
+            LogStreamName: "2025/07/11/[$LATEST]bccb3a3c43aa4fd9ae132c612945f819"
+
+    LogsLogStream34:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: !Sub "/aws/lambda/${LambdaFunction10}"
+            LogStreamName: "2025/07/11/[$LATEST]dbaf8d5a53b7470a807fcd093a9dbbc8"
+
+    LogsLogStream35:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: !Sub "/aws/lambda/${LambdaFunction10}"
+            LogStreamName: "2025/07/11/[$LATEST]e20c0c97e14d4ff2875b90f0df5cbbeb"
+
+    LogsLogStream36:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: !Sub "/aws/lambda/${LambdaFunction10}"
+            LogStreamName: "2025/07/11/[$LATEST]e52f520ca5db403db23b6e4c5206ce76"
+
+    LogsLogStream37:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: !Sub "/aws/lambda/${LambdaFunction10}"
+            LogStreamName: "2025/07/12/[$LATEST]144556db7be54b51860736156e062844"
+
+    LogsLogStream38:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: !Sub "/aws/lambda/${LambdaFunction10}"
+            LogStreamName: "2025/07/12/[$LATEST]62ca8d991ea140e6a9156b77de0b64ce"
+
+    LogsLogStream39:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: !Sub "/aws/lambda/${LambdaFunction10}"
+            LogStreamName: "2025/07/12/[$LATEST]79f729b910ab4bdb8348459f01b8e630"
+
+    LogsLogStream40:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: !Sub "/aws/lambda/${LambdaFunction10}"
+            LogStreamName: "2025/07/12/[$LATEST]cf31739163a24aa498ec1deff33d645a"
+
+    LogsLogStream41:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: !Sub "/aws/lambda/${LambdaFunction10}"
+            LogStreamName: "2025/07/12/[$LATEST]cfdf74cc247d412f94f1870d007accc9"
+
+    LogsLogStream42:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: !Sub "/aws/lambda/${LambdaFunction10}"
+            LogStreamName: "2025/07/12/[$LATEST]e55c00e375e24bc9853955e4a5809e83"
+
+    LogsLogStream43:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: !Sub "/aws/lambda/${LambdaFunction10}"
+            LogStreamName: "2025/07/30/[$LATEST]1002532f07274c869a4dc28ec7e049ec"
+
+    LogsLogStream44:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: !Sub "/aws/lambda/${LambdaFunction9}"
+            LogStreamName: "2025/07/16/[$LATEST]39f7be85fa5a4fb4b4076237a8a95cff"
+
+    LogsLogStream45:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: !Sub "/aws/lambda/${LambdaFunction9}"
+            LogStreamName: "2025/07/30/[$LATEST]58ceb53971da4606831c1969aeaf92fc"
+
+    LogsLogStream46:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: !Sub "/aws/lambda/${LambdaFunction9}"
+            LogStreamName: "2025/07/30/[$LATEST]b581b2f0e06341e8a4b79c1d1e9a49aa"
+
+    LogsLogStream47:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: !Sub "/aws/lambda/${LambdaFunction9}"
+            LogStreamName: "2025/07/30/[$LATEST]e82eae1babd84375b4f59db1002dd0e2"
+
+    LogsLogStream48:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: !Sub "/aws/lambda/${LambdaFunction2}"
+            LogStreamName: "2025/07/21/[$LATEST]79bfd8949bb3487ea1147f1aefd887a7"
+
+    LogsLogStream49:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: !Sub "/aws/lambda/${LambdaFunction7}"
+            LogStreamName: "2025/07/21/[$LATEST]3e7b66c80217457589e8e651d869d2cf"
+
+    LogsLogStream50:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: !Sub "/aws/lambda/${LambdaFunction12}"
+            LogStreamName: "2025/07/21/[$LATEST]29a2d2a721d7451584c1454642abb5dd"
+
+    LogsLogStream51:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: !Sub "/aws/lambda/${LambdaFunction12}"
+            LogStreamName: "2025/07/21/[$LATEST]4d83601dea1f4dcbab7cfda9852c7d04"
+
+    LogsLogStream52:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: !Sub "/aws/lambda/${LambdaFunction5}"
+            LogStreamName: "2025/07/21/[$LATEST]398f915eb2274f1caeef4a03291be481"
+
+    LogsLogStream53:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: !Sub "/aws/lambda/${LambdaFunction5}"
+            LogStreamName: "2025/07/21/[$LATEST]8b676e165d414eec96288f3395c2c70d"
+
+    LogsLogStream54:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: !Sub "/aws/lambda/${LambdaFunction11}"
+            LogStreamName: "2025/07/21/[$LATEST]1df29f3e47be445e863f2807af30ba79"
+
+    LogsLogStream55:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: !Sub "/aws/lambda/${LambdaFunction8}"
+            LogStreamName: "2025/07/21/[$LATEST]0ea0428858ad4f2796b146a31c49f103"
+
+    LogsLogStream56:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: !Sub "/aws/lambda/${LambdaFunction8}"
+            LogStreamName: "2025/07/21/[$LATEST]a64611728e1b4b50bce435e4d3a215f3"
+
+    LogsLogStream57:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: !Sub "/aws/lambda/${LambdaFunction6}"
+            LogStreamName: "2025/07/21/[$LATEST]f050581c99c547eeb4d60a09a6ddf124"
+
+    LogsLogStream58:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: !Sub "/aws/lambda/${LambdaFunction3}"
+            LogStreamName: "2025/07/21/[$LATEST]4ad4e02dab0c433f8835092681b404e1"
+
+    LogsLogStream59:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: !Sub "/aws/lambda/${LambdaFunction3}"
+            LogStreamName: "2025/07/21/[$LATEST]aedae3e0a5db44d88873acab47f845bf"
+
+    LogsLogStream60:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: !Sub "/aws/lambda/${LambdaFunction}"
+            LogStreamName: "2025/07/21/[$LATEST]faa8fbc58d6f4240af4321baae7ae2b1"
+
+    LogsLogStream61:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: !Sub "/aws/lambda/${LambdaFunction4}"
+            LogStreamName: "2025/07/21/[$LATEST]d6393e239a274610aba430ee3779c764"
+
+    LogsLogStream62:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: "/ecs/docx-to-htmk-task"
+            LogStreamName: "ecs/docx-to-html-worker/0ae3248c1a934749a41281ff40ca9a29"
+
+    LogsLogStream63:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: "/ecs/docx-to-htmk-task"
+            LogStreamName: "ecs/docx-to-html-worker/213e8107965241aba2af5dba00b17472"
+
+    LogsLogStream64:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: "/ecs/docx-to-htmk-task"
+            LogStreamName: "ecs/docx-to-html-worker/29aa4e53f5794ce09d664a1209b1f242"
+
+    LogsLogStream65:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: "/ecs/docx-to-htmk-task"
+            LogStreamName: "ecs/docx-to-html-worker/416ad5a16f84429787cd6e2171b5357e"
+
+    LogsLogStream66:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: "/ecs/docx-to-htmk-task"
+            LogStreamName: "ecs/docx-to-html-worker/6357cafd929c4b5884930c1d5544d1a3"
+
+    LogsLogStream67:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: "/ecs/docx-to-htmk-task"
+            LogStreamName: "ecs/docx-to-html-worker/727883598e374605bfa4042ec627b0b5"
+
+    LogsLogStream68:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: "/ecs/docx-to-htmk-task"
+            LogStreamName: "ecs/docx-to-html-worker/7907c8d4f18c4d50998a0e374c7877c4"
+
+    LogsLogStream69:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: "/ecs/docx-to-htmk-task"
+            LogStreamName: "ecs/docx-to-html-worker/8d3426ee3ef445049a767c7a39829421"
+
+    LogsLogStream70:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: "/ecs/docx-to-htmk-task"
+            LogStreamName: "ecs/docx-to-html-worker/a38db6a2251e4031b56ee18c2071ab85"
+
+    LogsLogStream71:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: "/ecs/docx-to-htmk-task"
+            LogStreamName: "ecs/docx-to-html-worker/a463057d27944fb99195ec240fee0c42"
+
+    LogsLogStream72:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: "/ecs/docx-to-htmk-task"
+            LogStreamName: "ecs/docx-to-html-worker/ad32a18be95d410c90ca70abb40eb3a6"
+
+    LogsLogStream73:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: "/ecs/docx-to-htmk-task"
+            LogStreamName: "ecs/docx-to-html-worker/b74ec9c7813c4853b73b1e6f8c8ac385"
+
+    LogsLogStream74:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: "/ecs/docx-to-htmk-task"
+            LogStreamName: "ecs/docx-to-html-worker/bd1cb20c19b8499fa59525e3a471c252"
+
+    LogsLogStream75:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: "/ecs/docx-to-htmk-task"
+            LogStreamName: "ecs/docx-to-html-worker/c433b32dce5b4e70b064382f10a918a5"
+
+    LogsLogStream76:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: "/ecs/docx-to-htmk-task"
+            LogStreamName: "ecs/docx-to-html-worker/cb440bd7728e4f13befe3360e9cfb16b"
+
+    LogsLogStream77:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: "/ecs/docx-to-htmk-task"
+            LogStreamName: "ecs/docx-to-html-worker/d9e5249f9c2f49db98c33d2b2e900c6f"
+
+    LogsLogStream78:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: "/ecs/docx-to-htmk-task"
+            LogStreamName: "ecs/docx-to-html-worker/e1ad8a9d86704b62b8a04b73af3b6709"
+
+    LogsLogStream79:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: "/ecs/docx-to-htmk-task"
+            LogStreamName: "ecs/docx-to-html-worker/f10b73b2da6a4902b4b4f197d3b62990"
+
+    LogsLogStream80:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: "/ecs/image-to-text-task"
+            LogStreamName: "ecs/ocr-image-processing-worker/1e5448a1f443454885014433c3f7380f"
+
+    LogsLogStream81:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: "/ecs/image-to-text-task"
+            LogStreamName: "ecs/ocr-image-processing-worker/557233a585f943009159c3fe1f5a4ed2"
+
+    LogsLogStream82:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: "/ecs/image-to-text-task"
+            LogStreamName: "ecs/ocr-image-processing-worker/6437606bcb3b4b4f9bb40e5084b03820"
+
+    LogsLogStream83:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: "/ecs/image-to-text-task"
+            LogStreamName: "ecs/ocr-image-processing-worker/b86f6e45448b4e6f94a48c084149752b"
+
+    LogsLogStream84:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: "/ecs/semantic-chunking-task"
+            LogStreamName: "ecs/semantic-chunking-worker/00021b4f75bb40d3a1d3c9263efc8491"
+
+    LogsLogStream85:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: "/ecs/semantic-chunking-task"
+            LogStreamName: "ecs/semantic-chunking-worker/0c71e509c4f04279a40adc10515537d9"
+
+    LogsLogStream86:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: "/ecs/semantic-chunking-task"
+            LogStreamName: "ecs/semantic-chunking-worker/1d5b20e7aca24c0aa7271331d77a66fb"
+
+    LogsLogStream87:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: "/ecs/semantic-chunking-task"
+            LogStreamName: "ecs/semantic-chunking-worker/283697e3deee4880979b42bc1e0cf596"
+
+    LogsLogStream88:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: "/ecs/semantic-chunking-task"
+            LogStreamName: "ecs/semantic-chunking-worker/4c9b58da52c84c81925c9491e0104562"
+
+    LogsLogStream89:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: "/ecs/semantic-chunking-task"
+            LogStreamName: "ecs/semantic-chunking-worker/51c8a3de4c054ec68beeae98bc449398"
+
+    LogsLogStream90:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: "/ecs/semantic-chunking-task"
+            LogStreamName: "ecs/semantic-chunking-worker/58e23991b16b4f13abeb244e8455fe68"
+
+    LogsLogStream91:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: "/ecs/semantic-chunking-task"
+            LogStreamName: "ecs/semantic-chunking-worker/5c91388986204298ba38735db19c8650"
+
+    LogsLogStream92:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: "/ecs/semantic-chunking-task"
+            LogStreamName: "ecs/semantic-chunking-worker/64d19294b87444f09f801c9833fa94d1"
+
+    LogsLogStream93:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: "/ecs/semantic-chunking-task"
+            LogStreamName: "ecs/semantic-chunking-worker/7760b9d89c6843e29282db8048d9ddaf"
+
+    LogsLogStream94:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: "/ecs/semantic-chunking-task"
+            LogStreamName: "ecs/semantic-chunking-worker/c838330db39b4dcc85dd92a4943b298f"
+
+    LogsLogStream95:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: "/ecs/semantic-chunking-task"
+            LogStreamName: "ecs/semantic-chunking-worker/dd3193aa0a214d51a46fed932396d634"
+
+    LogsLogStream96:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: "/ecs/vector-embedding-task"
+            LogStreamName: "ecs/vector-embedding-worker/1f19f0fcb6604238ad0438de3d220b91"
+
+    LogsLogStream97:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: "/ecs/vector-embedding-task"
+            LogStreamName: "ecs/vector-embedding-worker/330fe2c9ba00427680dfe4f4400fe408"
+
+    LogsLogStream98:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: "/ecs/vector-embedding-task"
+            LogStreamName: "ecs/vector-embedding-worker/368cd1ec8b044aee9817b59f579d04bc"
+
+    LogsLogStream99:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: "/ecs/vector-embedding-task"
+            LogStreamName: "ecs/vector-embedding-worker/400e185d44f240e5b7bc3aebb32df652"
+
+    LogsLogStream100:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: "/ecs/vector-embedding-task"
+            LogStreamName: "ecs/vector-embedding-worker/50b2adfbded7473699867e84c0035b66"
+
+    LogsLogStream101:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: "/ecs/vector-embedding-task"
+            LogStreamName: "ecs/vector-embedding-worker/575ad69d55234595b0c4c2370e7561f7"
+
+    LogsLogStream102:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: "/ecs/vector-embedding-task"
+            LogStreamName: "ecs/vector-embedding-worker/772016434b404a2b9e3671bddd1a7fa4"
+
+    LogsLogStream103:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: "/ecs/vector-embedding-task"
+            LogStreamName: "ecs/vector-embedding-worker/8b914282ead747529d3c701fa550301b"
+
+    LogsLogStream104:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: "/ecs/vector-embedding-task"
+            LogStreamName: "ecs/vector-embedding-worker/a095c88968394a1d88161a0288d48039"
+
+    LogsLogStream105:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: "/ecs/vector-embedding-task"
+            LogStreamName: "ecs/vector-embedding-worker/a8a11c5c7b7b450f919ef768261962a8"
+
+    LogsLogStream106:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: "/ecs/vector-embedding-task"
+            LogStreamName: "ecs/vector-embedding-worker/bb031bcc533f47bfaaf4d2ff417b68c3"
+
+    LogsLogStream107:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: "/ecs/vector-embedding-task"
+            LogStreamName: "ecs/vector-embedding-worker/d46be1af4eec4c13a85045f08706b12f"
+
+    LogsLogStream108:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: "/ecs/vector-embedding-task"
+            LogStreamName: "ecs/vector-embedding-worker/e6606f752b4545d7a0b9c793b3f3c4b0"
+
+    LogsLogStream109:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: "/ecs/vector-embedding-task"
+            LogStreamName: "ecs/vector-embedding-worker/e8d778cc25534ada83b747823cf2ca65"
+
+    LogsLogStream110:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: "/ecs/vector-embedding-task"
+            LogStreamName: "ecs/vector-embedding-worker/ebc0a000429c48a08b31929270490801"
+
+    LogsLogStream111:
+        Type: "AWS::Logs::LogStream"
+        Properties:
+            LogGroupName: "/ecs/vector-embedding-task"
+            LogStreamName: "ecs/vector-embedding-worker/fff6a1bbbc384e67aa19216c7b29524a"
+
+    OpenSearchServiceDomain:
+        Type: "AWS::OpenSearchService::Domain"
+        Properties:
+            DomainName: "search-rag-testing"
+            EngineVersion: "OpenSearch_2.19"
+            ClusterConfig: 
+                ColdStorageOptions: 
+                    Enabled: false
+                DedicatedMasterCount: 3
+                DedicatedMasterEnabled: true
+                DedicatedMasterType: "m7g.large.elasticsearch"
+                InstanceCount: 3
+                InstanceType: "r7g.large.elasticsearch"
+                ZoneAwarenessEnabled: true
+                ZoneAwarenessConfig: 
+                    AvailabilityZoneCount: 3
+                WarmEnabled: true
+                WarmType: "ultrawarm1.large.elasticsearch"
+                WarmCount: 3
+            AccessPolicies: !Sub "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Effect\":\"Allow\",\"Principal\":{\"AWS\":\"*\"},\"Action\":\"es:*\",\"Resource\":\"arn:aws:es:${AWS::Region}:${AWS::AccountId}:domain/search-rag-testing/*\"}]}"
+            SnapshotOptions: {}
+            snapshot_options: {}
+            VPCOptions: 
+                SecurityGroupIds: 
+                  - "sg-0b34ec5b5fa22b497"
+                SubnetIds: 
+                  - "subnet-071a18df37d5f2ec3"
+                  - "subnet-0ba23bee12396c17d"
+                  - "subnet-0c7560d155ecda0df"
+            EncryptionAtRestOptions: 
+                Enabled: true
+                KmsKeyId: !Sub "arn:aws:kms:${AWS::Region}:${AWS::AccountId}:key/da996a70-2468-44c3-9f5a-58921b9f0ca8"
+            NodeToNodeEncryptionOptions: 
+                Enabled: true
+            AdvancedOptions: 
+                "indices.fielddata.cache.size": "20"
+                "indices.query.bool.max_clause_count": "1024"
+                override_main_response_version: "false"
+                "rest.action.multi.allow_explicit_index": "true"
+            EBSOptions: 
+                EBSEnabled: true
+                VolumeType: "gp3"
+                VolumeSize: 100
+                Iops: 3000
+                Throughput: 125
+            CognitoOptions: 
+                Enabled: false
+            DomainEndpointOptions: 
+                EnforceHTTPS: true
+                TLSSecurityPolicy: "Policy-Min-TLS-1-2-2019-07"
+                CustomEndpointEnabled: false
+            AdvancedSecurityOptions: 
+                Enabled: true
+                InternalUserDatabaseEnabled: true
+                AnonymousAuthEnabled: false
+
     IAMUser:
         Type: "AWS::IAM::User"
         Properties:
             Path: "/"
             UserName: "anhphan"
             Groups: 
-              - "VPBankHackathon"
+              - !Ref IAMGroup
             ManagedPolicyArns: 
               - "arn:aws:iam::aws:policy/IAMUserChangePassword"
 
@@ -191,7 +2212,7 @@ Resources:
             Path: "/"
             UserName: "minhthao"
             Groups: 
-              - "VPBankHackathon"
+              - !Ref IAMGroup
             ManagedPolicyArns: 
               - "arn:aws:iam::aws:policy/IAMUserChangePassword"
 
@@ -201,7 +2222,7 @@ Resources:
             Path: "/"
             UserName: "tanhong"
             Groups: 
-              - "VPBankHackathon"
+              - !Ref IAMGroup
             ManagedPolicyArns: 
               - "arn:aws:iam::aws:policy/IAMUserChangePassword"
 
@@ -210,10 +2231,6 @@ Resources:
         Properties:
             Path: "/"
             UserName: "testing-user"
-            Tags: 
-              - 
-                Key: "AKIARJ6KODBR455FHEPP"
-                Value: "Former2 access key"
             ManagedPolicyArns: 
               - "arn:aws:iam::aws:policy/ReadOnlyAccess"
               - "arn:aws:iam::aws:policy/IAMUserChangePassword"
@@ -224,13 +2241,1275 @@ Resources:
             Path: "/"
             UserName: "trungthanh"
             Groups: 
-              - "VPBankHackathon"
-            Tags: 
-              - 
-                Key: "AKIARJ6KODBRST6INOXF"
-                Value: "Bedrock access key"
+              - !Ref IAMGroup
             ManagedPolicyArns: 
               - "arn:aws:iam::aws:policy/IAMUserChangePassword"
+
+    IAMGroup:
+        Type: "AWS::IAM::Group"
+        Properties:
+            Path: "/"
+            GroupName: "VPBankHackathon"
+
+    IAMRole:
+        Type: "AWS::IAM::Role"
+        Properties:
+            Path: "/"
+            RoleName: "amplify-d1m1jfdu9315t1-ma-AmplifyBranchLinkerCustom-3LYQ1tHrnIAu"
+            AssumeRolePolicyDocument: "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Effect\":\"Allow\",\"Principal\":{\"Service\":\"lambda.amazonaws.com\"},\"Action\":\"sts:AssumeRole\"}]}"
+            MaxSessionDuration: 3600
+            ManagedPolicyArns: 
+              - "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+            Description: ""
+            Tags: 
+              - 
+                Key: "amplify:branch-name"
+                Value: "main"
+              - 
+                Key: "amplify:app-id"
+                Value: "d1m1jfdu9315t1"
+              - 
+                Key: "amplify:deployment-type"
+                Value: "branch"
+              - 
+                Key: "created-by"
+                Value: "amplify"
+
+    IAMRole2:
+        Type: "AWS::IAM::Role"
+        Properties:
+            Path: "/"
+            RoleName: "amplify-d1m1jfdu9315t1-ma-amplifyAuthauthenticatedU-iQdmPteoLYOx"
+            AssumeRolePolicyDocument: !Sub "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Effect\":\"Allow\",\"Principal\":{\"Federated\":\"cognito-identity.amazonaws.com\"},\"Action\":\"sts:AssumeRoleWithWebIdentity\",\"Condition\":{\"StringEquals\":{\"cognito-identity.amazonaws.com:aud\":\"${AWS::Region}:ad26d216-4235-4d38-bdd7-282b56ffb0dd\"},\"ForAnyValue:StringLike\":{\"cognito-identity.amazonaws.com:amr\":\"authenticated\"}}}]}"
+            MaxSessionDuration: 3600
+            ManagedPolicyArns: 
+              - !Ref IAMManagedPolicy
+            Description: ""
+            Tags: 
+              - 
+                Key: "amplify:branch-name"
+                Value: "main"
+              - 
+                Key: "amplify:app-id"
+                Value: "d1m1jfdu9315t1"
+              - 
+                Key: "amplify:deployment-type"
+                Value: "branch"
+              - 
+                Key: "created-by"
+                Value: "amplify"
+              - 
+                Key: "amplify:friendly-name"
+                Value: "amplifyAuth"
+
+    IAMRole3:
+        Type: "AWS::IAM::Role"
+        Properties:
+            Path: "/"
+            RoleName: "amplify-d1m1jfdu9315t1-ma-AmplifyManagedTableOnEven-ZNGVM4KfsriV"
+            AssumeRolePolicyDocument: "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Effect\":\"Allow\",\"Principal\":{\"Service\":\"lambda.amazonaws.com\"},\"Action\":\"sts:AssumeRole\"}]}"
+            MaxSessionDuration: 3600
+            ManagedPolicyArns: 
+              - "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+            Description: ""
+            Tags: 
+              - 
+                Key: "amplify:branch-name"
+                Value: "main"
+              - 
+                Key: "amplify:app-id"
+                Value: "d1m1jfdu9315t1"
+              - 
+                Key: "amplify:deployment-type"
+                Value: "branch"
+              - 
+                Key: "created-by"
+                Value: "amplify"
+              - 
+                Key: "amplify:friendly-name"
+                Value: "amplifyData"
+
+    IAMRole4:
+        Type: "AWS::IAM::Role"
+        Properties:
+            Path: "/"
+            RoleName: "amplify-d1m1jfdu9315t1-ma-AmplifyBranchLinkerCustom-lBWVdi60EKXZ"
+            AssumeRolePolicyDocument: "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Effect\":\"Allow\",\"Principal\":{\"Service\":\"lambda.amazonaws.com\"},\"Action\":\"sts:AssumeRole\"}]}"
+            MaxSessionDuration: 3600
+            ManagedPolicyArns: 
+              - "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+            Description: ""
+            Tags: 
+              - 
+                Key: "amplify:branch-name"
+                Value: "main"
+              - 
+                Key: "amplify:app-id"
+                Value: "d1m1jfdu9315t1"
+              - 
+                Key: "amplify:deployment-type"
+                Value: "branch"
+              - 
+                Key: "created-by"
+                Value: "amplify"
+
+    IAMRole5:
+        Type: "AWS::IAM::Role"
+        Properties:
+            Path: "/"
+            RoleName: "amplify-d1m1jfdu9315t1-ma-AmplifyManagedTableIsComp-CSrX6oYleYJm"
+            AssumeRolePolicyDocument: "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Effect\":\"Allow\",\"Principal\":{\"Service\":\"lambda.amazonaws.com\"},\"Action\":\"sts:AssumeRole\"}]}"
+            MaxSessionDuration: 3600
+            ManagedPolicyArns: 
+              - "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+            Description: ""
+            Tags: 
+              - 
+                Key: "amplify:branch-name"
+                Value: "main"
+              - 
+                Key: "amplify:app-id"
+                Value: "d1m1jfdu9315t1"
+              - 
+                Key: "amplify:deployment-type"
+                Value: "branch"
+              - 
+                Key: "created-by"
+                Value: "amplify"
+              - 
+                Key: "amplify:friendly-name"
+                Value: "amplifyData"
+
+    IAMRole6:
+        Type: "AWS::IAM::Role"
+        Properties:
+            Path: "/"
+            RoleName: "amplify-d1m1jfdu9315t1-ma-amplifyAuthunauthenticate-O0wxXcCEHJey"
+            AssumeRolePolicyDocument: !Sub "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Effect\":\"Allow\",\"Principal\":{\"Federated\":\"cognito-identity.amazonaws.com\"},\"Action\":\"sts:AssumeRoleWithWebIdentity\",\"Condition\":{\"StringEquals\":{\"cognito-identity.amazonaws.com:aud\":\"${AWS::Region}:ad26d216-4235-4d38-bdd7-282b56ffb0dd\"},\"ForAnyValue:StringLike\":{\"cognito-identity.amazonaws.com:amr\":\"unauthenticated\"}}}]}"
+            MaxSessionDuration: 3600
+            ManagedPolicyArns: 
+              - !Ref IAMManagedPolicy6
+            Description: ""
+            Tags: 
+              - 
+                Key: "amplify:branch-name"
+                Value: "main"
+              - 
+                Key: "amplify:app-id"
+                Value: "d1m1jfdu9315t1"
+              - 
+                Key: "amplify:deployment-type"
+                Value: "branch"
+              - 
+                Key: "created-by"
+                Value: "amplify"
+              - 
+                Key: "amplify:friendly-name"
+                Value: "amplifyAuth"
+
+    IAMRole7:
+        Type: "AWS::IAM::Role"
+        Properties:
+            Path: "/"
+            RoleName: "amplify-d1m1jfdu9315t1-ma-AmplifyTableWaiterStateMa-FDw3LVY7nckf"
+            AssumeRolePolicyDocument: "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Effect\":\"Allow\",\"Principal\":{\"Service\":\"states.amazonaws.com\"},\"Action\":\"sts:AssumeRole\"}]}"
+            MaxSessionDuration: 3600
+            Description: ""
+            Tags: 
+              - 
+                Key: "amplify:branch-name"
+                Value: "main"
+              - 
+                Key: "amplify:app-id"
+                Value: "d1m1jfdu9315t1"
+              - 
+                Key: "amplify:deployment-type"
+                Value: "branch"
+              - 
+                Key: "created-by"
+                Value: "amplify"
+              - 
+                Key: "amplify:friendly-name"
+                Value: "amplifyData"
+
+    IAMRole8:
+        Type: "AWS::IAM::Role"
+        Properties:
+            Path: "/"
+            RoleName: "amplify-d1m1jfdu9315t1-ma-CustomS3AutoDeleteObjects-ZflRl596r0gZ"
+            AssumeRolePolicyDocument: "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Effect\":\"Allow\",\"Principal\":{\"Service\":\"lambda.amazonaws.com\"},\"Action\":\"sts:AssumeRole\"}]}"
+            MaxSessionDuration: 3600
+            ManagedPolicyArns: 
+              - "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+            Description: ""
+            Tags: 
+              - 
+                Key: "amplify:branch-name"
+                Value: "main"
+              - 
+                Key: "amplify:app-id"
+                Value: "d1m1jfdu9315t1"
+              - 
+                Key: "amplify:deployment-type"
+                Value: "branch"
+              - 
+                Key: "created-by"
+                Value: "amplify"
+
+    IAMRole9:
+        Type: "AWS::IAM::Role"
+        Properties:
+            Path: "/"
+            RoleName: "amplify-d1m1jfdu9315t1-ma-CustomCDKBucketDeployment-5l1bHzG1NyzO"
+            AssumeRolePolicyDocument: "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Effect\":\"Allow\",\"Principal\":{\"Service\":\"lambda.amazonaws.com\"},\"Action\":\"sts:AssumeRole\"}]}"
+            MaxSessionDuration: 3600
+            ManagedPolicyArns: 
+              - "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+            Description: ""
+            Tags: 
+              - 
+                Key: "amplify:branch-name"
+                Value: "main"
+              - 
+                Key: "amplify:app-id"
+                Value: "d1m1jfdu9315t1"
+              - 
+                Key: "amplify:deployment-type"
+                Value: "branch"
+              - 
+                Key: "created-by"
+                Value: "amplify"
+
+    IAMRole10:
+        Type: "AWS::IAM::Role"
+        Properties:
+            Path: "/"
+            RoleName: "amplify-frontendapp-henry-AmplifyTableWaiterStateMa-Z2qXUcIKmp0B"
+            AssumeRolePolicyDocument: "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Effect\":\"Allow\",\"Principal\":{\"Service\":\"states.amazonaws.com\"},\"Action\":\"sts:AssumeRole\"}]}"
+            MaxSessionDuration: 3600
+            Description: ""
+            Tags: 
+              - 
+                Key: "amplify:deployment-type"
+                Value: "sandbox"
+              - 
+                Key: "created-by"
+                Value: "amplify"
+              - 
+                Key: "amplify:friendly-name"
+                Value: "amplifyData"
+
+    IAMRole11:
+        Type: "AWS::IAM::Role"
+        Properties:
+            Path: "/"
+            RoleName: "amplify-frontendapp-henry-AmplifyManagedTableIsComp-DbCkPRuGZ43U"
+            AssumeRolePolicyDocument: "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Effect\":\"Allow\",\"Principal\":{\"Service\":\"lambda.amazonaws.com\"},\"Action\":\"sts:AssumeRole\"}]}"
+            MaxSessionDuration: 3600
+            ManagedPolicyArns: 
+              - "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+            Description: ""
+            Tags: 
+              - 
+                Key: "amplify:deployment-type"
+                Value: "sandbox"
+              - 
+                Key: "created-by"
+                Value: "amplify"
+              - 
+                Key: "amplify:friendly-name"
+                Value: "amplifyData"
+
+    IAMRole12:
+        Type: "AWS::IAM::Role"
+        Properties:
+            Path: "/"
+            RoleName: "amplify-frontendapp-henry-AmplifyManagedTableOnEven-5ByV82tOYmTi"
+            AssumeRolePolicyDocument: "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Effect\":\"Allow\",\"Principal\":{\"Service\":\"lambda.amazonaws.com\"},\"Action\":\"sts:AssumeRole\"}]}"
+            MaxSessionDuration: 3600
+            ManagedPolicyArns: 
+              - "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+            Description: ""
+            Tags: 
+              - 
+                Key: "amplify:deployment-type"
+                Value: "sandbox"
+              - 
+                Key: "created-by"
+                Value: "amplify"
+              - 
+                Key: "amplify:friendly-name"
+                Value: "amplifyData"
+
+    IAMRole13:
+        Type: "AWS::IAM::Role"
+        Properties:
+            Path: "/"
+            RoleName: "amplify-frontendapp-henry-CustomS3AutoDeleteObjects-pIkY9SoD3k7F"
+            AssumeRolePolicyDocument: "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Effect\":\"Allow\",\"Principal\":{\"Service\":\"lambda.amazonaws.com\"},\"Action\":\"sts:AssumeRole\"}]}"
+            MaxSessionDuration: 3600
+            ManagedPolicyArns: 
+              - "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+            Description: ""
+            Tags: 
+              - 
+                Key: "amplify:deployment-type"
+                Value: "sandbox"
+              - 
+                Key: "created-by"
+                Value: "amplify"
+
+    IAMRole14:
+        Type: "AWS::IAM::Role"
+        Properties:
+            Path: "/service-role/"
+            RoleName: "AmplifySSRLoggingRole-709cc43e-bbe3-4e3d-8ab1-7473496ffed4"
+            AssumeRolePolicyDocument: "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Effect\":\"Allow\",\"Principal\":{\"Service\":\"amplify.amazonaws.com\"},\"Action\":\"sts:AssumeRole\"}]}"
+            MaxSessionDuration: 3600
+            ManagedPolicyArns: 
+              - !Ref IAMManagedPolicy2
+            Description: "The service role that will be used by AWS Amplify for Web Compute app logging."
+
+    IAMRole15:
+        Type: "AWS::IAM::Role"
+        Properties:
+            Path: "/service-role/"
+            RoleName: "AmplifySSRLoggingRole-d2f31c44-e943-4f99-a503-eb4bfeaa9ae9"
+            AssumeRolePolicyDocument: "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Effect\":\"Allow\",\"Principal\":{\"Service\":\"amplify.amazonaws.com\"},\"Action\":\"sts:AssumeRole\"}]}"
+            MaxSessionDuration: 3600
+            ManagedPolicyArns: 
+              - "arn:aws:iam::aws:policy/service-role/AmplifyBackendDeployFullAccess"
+              - !Ref IAMManagedPolicy4
+            Description: "The service role that will be used by AWS Amplify for Web Compute app logging."
+
+    IAMRole16:
+        Type: "AWS::IAM::Role"
+        Properties:
+            Path: "/"
+            RoleName: "amplify-frontendapp-henry-CustomCDKBucketDeployment-Wygg1phfp62m"
+            AssumeRolePolicyDocument: "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Effect\":\"Allow\",\"Principal\":{\"Service\":\"lambda.amazonaws.com\"},\"Action\":\"sts:AssumeRole\"}]}"
+            MaxSessionDuration: 3600
+            ManagedPolicyArns: 
+              - "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+            Description: ""
+            Tags: 
+              - 
+                Key: "amplify:deployment-type"
+                Value: "sandbox"
+              - 
+                Key: "created-by"
+                Value: "amplify"
+
+    IAMRole17:
+        Type: "AWS::IAM::Role"
+        Properties:
+            Path: "/"
+            RoleName: !Sub "cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}"
+            AssumeRolePolicyDocument: "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Effect\":\"Allow\",\"Principal\":{\"Service\":\"cloudformation.amazonaws.com\"},\"Action\":\"sts:AssumeRole\"}]}"
+            MaxSessionDuration: 3600
+            ManagedPolicyArns: 
+              - "arn:aws:iam::aws:policy/AdministratorAccess"
+            Description: ""
+
+    IAMRole18:
+        Type: "AWS::IAM::Role"
+        Properties:
+            Path: "/"
+            RoleName: !Sub "cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}"
+            AssumeRolePolicyDocument: !Sub "{\"Version\":\"2008-10-17\",\"Statement\":[{\"Effect\":\"Allow\",\"Principal\":{\"AWS\":\"arn:aws:iam::${AWS::AccountId}:root\"},\"Action\":\"sts:TagSession\"},{\"Effect\":\"Allow\",\"Principal\":{\"AWS\":\"arn:aws:iam::${AWS::AccountId}:root\"},\"Action\":\"sts:AssumeRole\"}]}"
+            MaxSessionDuration: 3600
+            Description: ""
+            Tags: 
+              - 
+                Key: "aws-cdk:bootstrap-role"
+                Value: "deploy"
+
+    IAMRole19:
+        Type: "AWS::IAM::Role"
+        Properties:
+            Path: "/"
+            RoleName: !Sub "cdk-hnb659fds-file-publishing-role-${AWS::AccountId}-${AWS::Region}"
+            AssumeRolePolicyDocument: !Sub "{\"Version\":\"2008-10-17\",\"Statement\":[{\"Effect\":\"Allow\",\"Principal\":{\"AWS\":\"arn:aws:iam::${AWS::AccountId}:root\"},\"Action\":\"sts:TagSession\"},{\"Effect\":\"Allow\",\"Principal\":{\"AWS\":\"arn:aws:iam::${AWS::AccountId}:root\"},\"Action\":\"sts:AssumeRole\"}]}"
+            MaxSessionDuration: 3600
+            Description: ""
+            Tags: 
+              - 
+                Key: "aws-cdk:bootstrap-role"
+                Value: "file-publishing"
+
+    IAMRole20:
+        Type: "AWS::IAM::Role"
+        Properties:
+            Path: "/"
+            RoleName: !Sub "cdk-hnb659fds-image-publishing-role-${AWS::AccountId}-${AWS::Region}"
+            AssumeRolePolicyDocument: !Sub "{\"Version\":\"2008-10-17\",\"Statement\":[{\"Effect\":\"Allow\",\"Principal\":{\"AWS\":\"arn:aws:iam::${AWS::AccountId}:root\"},\"Action\":\"sts:TagSession\"},{\"Effect\":\"Allow\",\"Principal\":{\"AWS\":\"arn:aws:iam::${AWS::AccountId}:root\"},\"Action\":\"sts:AssumeRole\"}]}"
+            MaxSessionDuration: 3600
+            Description: ""
+            Tags: 
+              - 
+                Key: "aws-cdk:bootstrap-role"
+                Value: "image-publishing"
+
+    IAMRole21:
+        Type: "AWS::IAM::Role"
+        Properties:
+            Path: "/"
+            RoleName: !Sub "cdk-hnb659fds-lookup-role-${AWS::AccountId}-${AWS::Region}"
+            AssumeRolePolicyDocument: !Sub "{\"Version\":\"2008-10-17\",\"Statement\":[{\"Effect\":\"Allow\",\"Principal\":{\"AWS\":\"arn:aws:iam::${AWS::AccountId}:root\"},\"Action\":\"sts:TagSession\"},{\"Effect\":\"Allow\",\"Principal\":{\"AWS\":\"arn:aws:iam::${AWS::AccountId}:root\"},\"Action\":\"sts:AssumeRole\"}]}"
+            MaxSessionDuration: 3600
+            ManagedPolicyArns: 
+              - "arn:aws:iam::aws:policy/ReadOnlyAccess"
+            Description: ""
+            Tags: 
+              - 
+                Key: "aws-cdk:bootstrap-role"
+                Value: "lookup"
+
+    IAMRole22:
+        Type: "AWS::IAM::Role"
+        Properties:
+            Path: "/"
+            RoleName: "ecsTaskExecutionRole"
+            AssumeRolePolicyDocument: "{\"Version\":\"2008-10-17\",\"Statement\":[{\"Sid\":\"\",\"Effect\":\"Allow\",\"Principal\":{\"Service\":\"ecs-tasks.amazonaws.com\"},\"Action\":\"sts:AssumeRole\"}]}"
+            MaxSessionDuration: 3600
+            ManagedPolicyArns: 
+              - "arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy"
+              - "arn:aws:iam::aws:policy/AmazonSQSFullAccess"
+              - "arn:aws:iam::aws:policy/AmazonS3FullAccess"
+              - "arn:aws:iam::aws:policy/AmazonOpenSearchServiceFullAccess"
+
+    IAMRole23:
+        Type: "AWS::IAM::Role"
+        Properties:
+            Path: "/"
+            RoleName: "TodoIAMRolecfd440-xljhlue7hbduli5pqywh6saju4-NONE"
+            AssumeRolePolicyDocument: "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Effect\":\"Allow\",\"Principal\":{\"Service\":\"appsync.amazonaws.com\"},\"Action\":\"sts:AssumeRole\"}]}"
+            MaxSessionDuration: 3600
+            Description: ""
+            Tags: 
+              - 
+                Key: "amplify:branch-name"
+                Value: "main"
+              - 
+                Key: "amplify:app-id"
+                Value: "d1m1jfdu9315t1"
+              - 
+                Key: "amplify:deployment-type"
+                Value: "branch"
+              - 
+                Key: "created-by"
+                Value: "amplify"
+              - 
+                Key: "amplify:friendly-name"
+                Value: "amplifyData"
+
+    IAMRole24:
+        Type: "AWS::IAM::Role"
+        Properties:
+            Path: "/service-role/"
+            RoleName: "QueryFunction-role-cdtyie8o"
+            AssumeRolePolicyDocument: "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Effect\":\"Allow\",\"Principal\":{\"Service\":\"lambda.amazonaws.com\"},\"Action\":\"sts:AssumeRole\"}]}"
+            MaxSessionDuration: 3600
+            ManagedPolicyArns: 
+              - "arn:aws:iam::aws:policy/AmazonS3FullAccess"
+              - !Ref IAMManagedPolicy8
+
+    IAMRole25:
+        Type: "AWS::IAM::Role"
+        Properties:
+            Path: "/"
+            RoleName: "TodoIAMRolecfd440-omfnupyukzerhnv6ip3hntzqky-NONE"
+            AssumeRolePolicyDocument: "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Effect\":\"Allow\",\"Principal\":{\"Service\":\"appsync.amazonaws.com\"},\"Action\":\"sts:AssumeRole\"}]}"
+            MaxSessionDuration: 3600
+            Description: ""
+            Tags: 
+              - 
+                Key: "amplify:deployment-type"
+                Value: "sandbox"
+              - 
+                Key: "created-by"
+                Value: "amplify"
+              - 
+                Key: "amplify:friendly-name"
+                Value: "amplifyData"
+
+    IAMServiceLinkedRole:
+        Type: "AWS::IAM::ServiceLinkedRole"
+        Properties:
+            AWSServiceName: "ops.apigateway.amazonaws.com"
+            Description: "The Service Linked Role is used by Amazon API Gateway."
+
+    IAMServiceLinkedRole2:
+        Type: "AWS::IAM::ServiceLinkedRole"
+        Properties:
+            AWSServiceName: "opensearchservice.amazonaws.com"
+
+    IAMServiceLinkedRole3:
+        Type: "AWS::IAM::ServiceLinkedRole"
+        Properties:
+            AWSServiceName: "ecs.amazonaws.com"
+            Description: "Policy to enable Amazon ECS to manage your EC2 instances and related resources."
+
+    IAMManagedPolicy:
+        Type: "AWS::IAM::ManagedPolicy"
+        Properties:
+            ManagedPolicyName: "amplify-d1m1jfdu9315t1-main-branch-fd738d4208-data7552DF31-15DRKRBW2FP70-amplifyDataAuthRolePolicy01567A5654-bMRovrJhj2zf"
+            Path: "/"
+            PolicyDocument: !Sub "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Action\":\"appsync:GraphQL\",\"Resource\":[\"arn:aws:appsync:${AWS::Region}:${AWS::AccountId}:apis/xljhlue7hbduli5pqywh6saju4/types/Todo/*\",\"arn:aws:appsync:${AWS::Region}:${AWS::AccountId}:apis/xljhlue7hbduli5pqywh6saju4/types/Query/fields/getTodo\",\"arn:aws:appsync:${AWS::Region}:${AWS::AccountId}:apis/xljhlue7hbduli5pqywh6saju4/types/Query/fields/listTodos\",\"arn:aws:appsync:${AWS::Region}:${AWS::AccountId}:apis/xljhlue7hbduli5pqywh6saju4/types/Mutation/fields/createTodo\",\"arn:aws:appsync:${AWS::Region}:${AWS::AccountId}:apis/xljhlue7hbduli5pqywh6saju4/types/Mutation/fields/updateTodo\",\"arn:aws:appsync:${AWS::Region}:${AWS::AccountId}:apis/xljhlue7hbduli5pqywh6saju4/types/Mutation/fields/deleteTodo\",\"arn:aws:appsync:${AWS::Region}:${AWS::AccountId}:apis/xljhlue7hbduli5pqywh6saju4/types/Subscription/fields/onCreateTodo\",\"arn:aws:appsync:${AWS::Region}:${AWS::AccountId}:apis/xljhlue7hbduli5pqywh6saju4/types/Subscription/fields/onUpdateTodo\",\"arn:aws:appsync:${AWS::Region}:${AWS::AccountId}:apis/xljhlue7hbduli5pqywh6saju4/types/Subscription/fields/onDeleteTodo\"],\"Effect\":\"Allow\"}]}"
+
+    IAMManagedPolicy2:
+        Type: "AWS::IAM::ManagedPolicy"
+        Properties:
+            ManagedPolicyName: "AmplifySSRLoggingPolicy-709cc43e-bbe3-4e3d-8ab1-7473496ffed4"
+            Path: "/service-role/"
+            PolicyDocument: !Sub |
+                {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Sid": "PushLogs",
+                            "Effect": "Allow",
+                            "Action": [
+                                "logs:CreateLogStream",
+                                "logs:PutLogEvents"
+                            ],
+                            "Resource": "arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/amplify/*:log-stream:*"
+                        },
+                        {
+                            "Sid": "CreateLogGroup",
+                            "Effect": "Allow",
+                            "Action": "logs:CreateLogGroup",
+                            "Resource": "arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/amplify/*"
+                        },
+                        {
+                            "Sid": "DescribeLogGroups",
+                            "Effect": "Allow",
+                            "Action": "logs:DescribeLogGroups",
+                            "Resource": "arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:*"
+                        }
+                    ]
+                }
+
+    IAMManagedPolicy3:
+        Type: "AWS::IAM::ManagedPolicy"
+        Properties:
+            ManagedPolicyName: "AWSLambdaBasicExecutionRole-5eea49d9-cdf3-415c-8b50-c38363c5dc9a"
+            Path: "/service-role/"
+            PolicyDocument: !Sub |
+                {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Effect": "Allow",
+                            "Action": "logs:CreateLogGroup",
+                            "Resource": "arn:aws:logs:${AWS::Region}:${AWS::AccountId}:*"
+                        },
+                        {
+                            "Effect": "Allow",
+                            "Action": [
+                                "logs:CreateLogStream",
+                                "logs:PutLogEvents"
+                            ],
+                            "Resource": [
+                                "arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/${LambdaFunction9}:*"
+                            ]
+                        }
+                    ]
+                }
+
+    IAMManagedPolicy4:
+        Type: "AWS::IAM::ManagedPolicy"
+        Properties:
+            ManagedPolicyName: "AmplifySSRLoggingPolicy-d2f31c44-e943-4f99-a503-eb4bfeaa9ae9"
+            Path: "/service-role/"
+            PolicyDocument: !Sub |
+                {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Sid": "PushLogs",
+                            "Effect": "Allow",
+                            "Action": [
+                                "logs:CreateLogStream",
+                                "logs:PutLogEvents"
+                            ],
+                            "Resource": "arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/amplify/*:log-stream:*"
+                        },
+                        {
+                            "Sid": "CreateLogGroup",
+                            "Effect": "Allow",
+                            "Action": "logs:CreateLogGroup",
+                            "Resource": "arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/amplify/*"
+                        },
+                        {
+                            "Sid": "DescribeLogGroups",
+                            "Effect": "Allow",
+                            "Action": "logs:DescribeLogGroups",
+                            "Resource": "arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:*"
+                        }
+                    ]
+                }
+
+    IAMManagedPolicy5:
+        Type: "AWS::IAM::ManagedPolicy"
+        Properties:
+            ManagedPolicyName: "amplify-frontendapp-henryng101-sandbox-7b812204ff-data7552DF31-44PX0RUCLDGP-amplifyDataAuthRolePolicy01567A5654-n6bTL0XId0Dg"
+            Path: "/"
+            PolicyDocument: !Sub "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Action\":\"appsync:GraphQL\",\"Resource\":[\"arn:aws:appsync:${AWS::Region}:${AWS::AccountId}:apis/omfnupyukzerhnv6ip3hntzqky/types/Todo/*\",\"arn:aws:appsync:${AWS::Region}:${AWS::AccountId}:apis/omfnupyukzerhnv6ip3hntzqky/types/Query/fields/getTodo\",\"arn:aws:appsync:${AWS::Region}:${AWS::AccountId}:apis/omfnupyukzerhnv6ip3hntzqky/types/Query/fields/listTodos\",\"arn:aws:appsync:${AWS::Region}:${AWS::AccountId}:apis/omfnupyukzerhnv6ip3hntzqky/types/Mutation/fields/createTodo\",\"arn:aws:appsync:${AWS::Region}:${AWS::AccountId}:apis/omfnupyukzerhnv6ip3hntzqky/types/Mutation/fields/updateTodo\",\"arn:aws:appsync:${AWS::Region}:${AWS::AccountId}:apis/omfnupyukzerhnv6ip3hntzqky/types/Mutation/fields/deleteTodo\",\"arn:aws:appsync:${AWS::Region}:${AWS::AccountId}:apis/omfnupyukzerhnv6ip3hntzqky/types/Subscription/fields/onCreateTodo\",\"arn:aws:appsync:${AWS::Region}:${AWS::AccountId}:apis/omfnupyukzerhnv6ip3hntzqky/types/Subscription/fields/onUpdateTodo\",\"arn:aws:appsync:${AWS::Region}:${AWS::AccountId}:apis/omfnupyukzerhnv6ip3hntzqky/types/Subscription/fields/onDeleteTodo\"],\"Effect\":\"Allow\"}]}"
+
+    IAMManagedPolicy6:
+        Type: "AWS::IAM::ManagedPolicy"
+        Properties:
+            ManagedPolicyName: "amplify-d1m1jfdu9315t1-main-branch-fd738d4208-data7552DF31-15DRKRBW2FP70-amplifyDataUnauthRolePolicy01355B9DCF-xty1li1PG6XP"
+            Path: "/"
+            PolicyDocument: !Sub "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Action\":\"appsync:GraphQL\",\"Resource\":[\"arn:aws:appsync:${AWS::Region}:${AWS::AccountId}:apis/xljhlue7hbduli5pqywh6saju4/types/Todo/*\",\"arn:aws:appsync:${AWS::Region}:${AWS::AccountId}:apis/xljhlue7hbduli5pqywh6saju4/types/Query/fields/getTodo\",\"arn:aws:appsync:${AWS::Region}:${AWS::AccountId}:apis/xljhlue7hbduli5pqywh6saju4/types/Query/fields/listTodos\",\"arn:aws:appsync:${AWS::Region}:${AWS::AccountId}:apis/xljhlue7hbduli5pqywh6saju4/types/Mutation/fields/createTodo\",\"arn:aws:appsync:${AWS::Region}:${AWS::AccountId}:apis/xljhlue7hbduli5pqywh6saju4/types/Mutation/fields/updateTodo\",\"arn:aws:appsync:${AWS::Region}:${AWS::AccountId}:apis/xljhlue7hbduli5pqywh6saju4/types/Mutation/fields/deleteTodo\",\"arn:aws:appsync:${AWS::Region}:${AWS::AccountId}:apis/xljhlue7hbduli5pqywh6saju4/types/Subscription/fields/onCreateTodo\",\"arn:aws:appsync:${AWS::Region}:${AWS::AccountId}:apis/xljhlue7hbduli5pqywh6saju4/types/Subscription/fields/onUpdateTodo\",\"arn:aws:appsync:${AWS::Region}:${AWS::AccountId}:apis/xljhlue7hbduli5pqywh6saju4/types/Subscription/fields/onDeleteTodo\"],\"Effect\":\"Allow\"}]}"
+
+    IAMManagedPolicy7:
+        Type: "AWS::IAM::ManagedPolicy"
+        Properties:
+            ManagedPolicyName: "amplify-frontendapp-henryng101-sandbox-7b812204ff-data7552DF31-44PX0RUCLDGP-amplifyDataUnauthRolePolicy01355B9DCF-qbEfy1I4QdK7"
+            Path: "/"
+            PolicyDocument: !Sub "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Action\":\"appsync:GraphQL\",\"Resource\":[\"arn:aws:appsync:${AWS::Region}:${AWS::AccountId}:apis/omfnupyukzerhnv6ip3hntzqky/types/Todo/*\",\"arn:aws:appsync:${AWS::Region}:${AWS::AccountId}:apis/omfnupyukzerhnv6ip3hntzqky/types/Query/fields/getTodo\",\"arn:aws:appsync:${AWS::Region}:${AWS::AccountId}:apis/omfnupyukzerhnv6ip3hntzqky/types/Query/fields/listTodos\",\"arn:aws:appsync:${AWS::Region}:${AWS::AccountId}:apis/omfnupyukzerhnv6ip3hntzqky/types/Mutation/fields/createTodo\",\"arn:aws:appsync:${AWS::Region}:${AWS::AccountId}:apis/omfnupyukzerhnv6ip3hntzqky/types/Mutation/fields/updateTodo\",\"arn:aws:appsync:${AWS::Region}:${AWS::AccountId}:apis/omfnupyukzerhnv6ip3hntzqky/types/Mutation/fields/deleteTodo\",\"arn:aws:appsync:${AWS::Region}:${AWS::AccountId}:apis/omfnupyukzerhnv6ip3hntzqky/types/Subscription/fields/onCreateTodo\",\"arn:aws:appsync:${AWS::Region}:${AWS::AccountId}:apis/omfnupyukzerhnv6ip3hntzqky/types/Subscription/fields/onUpdateTodo\",\"arn:aws:appsync:${AWS::Region}:${AWS::AccountId}:apis/omfnupyukzerhnv6ip3hntzqky/types/Subscription/fields/onDeleteTodo\"],\"Effect\":\"Allow\"}]}"
+
+    IAMManagedPolicy8:
+        Type: "AWS::IAM::ManagedPolicy"
+        Properties:
+            ManagedPolicyName: "AWSLambdaBasicExecutionRole-9e72e2fd-c696-462b-aba1-b0521eb6dd06"
+            Path: "/service-role/"
+            PolicyDocument: !Sub |
+                {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Effect": "Allow",
+                            "Action": "logs:CreateLogGroup",
+                            "Resource": "arn:aws:logs:${AWS::Region}:${AWS::AccountId}:*"
+                        },
+                        {
+                            "Effect": "Allow",
+                            "Action": [
+                                "logs:CreateLogStream",
+                                "logs:PutLogEvents"
+                            ],
+                            "Resource": [
+                                "arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/QueryFunction:*"
+                            ]
+                        }
+                    ]
+                }
+
+    IAMPolicy:
+        Type: "AWS::IAM::Policy"
+        Properties:
+            PolicyDocument: |
+                {
+                	"Version": "2012-10-17",
+                	"Statement": [
+                		{
+                			"Sid": "CoreServicesAccess",
+                			"Effect": "Allow",
+                			"Action": [
+                				"s3:*",
+                				"lambda:*",
+                				"amplify:*",
+                				"cognito-idp:*",
+                				"cognito-identity:*",
+                				"apigateway:*",
+                				"sqs:*",
+                				"ecs:*",
+                				"dynamodb:*",
+                				"elasticache:*",
+                				"es:*",
+                				"bedrock:*",
+                				"iam:CreateUser",
+                				"iam:ListServiceSpecificCredentials"
+                			],
+                			"Resource": "*"
+                		}
+                	]
+                }
+            Groups: 
+              - !Ref IAMGroup
+            PolicyName: "TestingInfra"
+
+    IAMPolicy2:
+        Type: "AWS::IAM::Policy"
+        Properties:
+            PolicyDocument: "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Action\":[\"amplify:GetBranch\",\"amplify:UpdateBranch\"],\"Resource\":\"arn:aws:amplify:*:*:apps/d1m1jfdu9315t1/branches/main\",\"Effect\":\"Allow\"}]}"
+            Roles: 
+              - !Ref IAMRole
+            PolicyName: "AmplifyBranchLinkerCustomResourceLambdaServiceRoleDefaultPolicy86099CA1"
+
+    IAMPolicy3:
+        Type: "AWS::IAM::Policy"
+        Properties:
+            PolicyDocument: !Sub "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Action\":\"states:StartExecution\",\"Resource\":\"arn:aws:states:${AWS::Region}:${AWS::AccountId}:stateMachine:AmplifyTableWaiterStateMachine060600BC-cxnV2vjyr9E9\",\"Effect\":\"Allow\"}]}"
+            Roles: 
+              - !Ref IAMRole3
+            PolicyName: !Ref IAMPolicy12
+
+    IAMPolicy4:
+        Type: "AWS::IAM::Policy"
+        Properties:
+            PolicyDocument: !Sub "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Action\":[\"dynamodb:CreateTable\",\"dynamodb:UpdateTable\",\"dynamodb:DeleteTable\",\"dynamodb:DescribeTable\",\"dynamodb:DescribeContinuousBackups\",\"dynamodb:DescribeTimeToLive\",\"dynamodb:UpdateContinuousBackups\",\"dynamodb:UpdateTimeToLive\",\"dynamodb:TagResource\",\"dynamodb:UntagResource\",\"dynamodb:ListTagsOfResource\"],\"Resource\":\"arn:aws:dynamodb:${AWS::Region}:${AWS::AccountId}:table/*-xljhlue7hbduli5pqywh6saju4-NONE\",\"Effect\":\"Allow\"},{\"Action\":\"lambda:ListTags\",\"Resource\":\"arn:aws:lambda:${AWS::Region}:${AWS::AccountId}:function:*TableManager*\",\"Effect\":\"Allow\"}]}"
+            Roles: 
+              - !Ref IAMRole3
+            PolicyName: !Ref IAMPolicy6
+
+    IAMPolicy5:
+        Type: "AWS::IAM::Policy"
+        Properties:
+            PolicyDocument: !Sub "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Action\":\"lambda:InvokeFunction\",\"Resource\":[\"arn:aws:lambda:${AWS::Region}:${AWS::AccountId}:function:${LambdaFunction2}\",\"arn:aws:lambda:${AWS::Region}:${AWS::AccountId}:function:${LambdaFunction2}:*\"],\"Effect\":\"Allow\"},{\"Action\":\"lambda:GetFunction\",\"Resource\":\"arn:aws:lambda:${AWS::Region}:${AWS::AccountId}:function:${LambdaFunction2}\",\"Effect\":\"Allow\"}]}"
+            Roles: 
+              - !Ref IAMRole4
+            PolicyName: "AmplifyBranchLinkerCustomResourceProviderframeworkonEventServiceRoleDefaultPolicy38AAE412"
+
+    IAMPolicy6:
+        Type: "AWS::IAM::Policy"
+        Properties:
+            PolicyDocument: !Sub "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Action\":[\"dynamodb:CreateTable\",\"dynamodb:UpdateTable\",\"dynamodb:DeleteTable\",\"dynamodb:DescribeTable\",\"dynamodb:DescribeContinuousBackups\",\"dynamodb:DescribeTimeToLive\",\"dynamodb:UpdateContinuousBackups\",\"dynamodb:UpdateTimeToLive\",\"dynamodb:TagResource\",\"dynamodb:UntagResource\",\"dynamodb:ListTagsOfResource\"],\"Resource\":\"arn:aws:dynamodb:${AWS::Region}:${AWS::AccountId}:table/*-xljhlue7hbduli5pqywh6saju4-NONE\",\"Effect\":\"Allow\"},{\"Action\":\"lambda:ListTags\",\"Resource\":\"arn:aws:lambda:${AWS::Region}:${AWS::AccountId}:function:*TableManager*\",\"Effect\":\"Allow\"}]}"
+            Roles: 
+              - !Ref IAMRole5
+            PolicyName: !Ref IAMPolicy11
+
+    IAMPolicy7:
+        Type: "AWS::IAM::Policy"
+        Properties:
+            PolicyDocument: !Sub "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Action\":\"lambda:InvokeFunction\",\"Resource\":[\"arn:aws:lambda:${AWS::Region}:${AWS::AccountId}:function:${LambdaFunction6}\",\"arn:aws:lambda:${AWS::Region}:${AWS::AccountId}:function:${LambdaFunction6}:*\"],\"Effect\":\"Allow\"}]}"
+            Roles: 
+              - !Ref IAMRole7
+            PolicyName: !Ref IAMPolicy10
+
+    IAMPolicy8:
+        Type: "AWS::IAM::Policy"
+        Properties:
+            PolicyDocument: !Sub "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Action\":[\"s3:GetObject*\",\"s3:GetBucket*\",\"s3:List*\"],\"Resource\":[\"arn:aws:s3:::${S3Bucket2}\",\"arn:aws:s3:::${S3Bucket2}/*\"],\"Effect\":\"Allow\"},{\"Action\":[\"s3:GetObject*\",\"s3:GetBucket*\",\"s3:List*\",\"s3:DeleteObject*\",\"s3:PutObject\",\"s3:PutObjectLegalHold\",\"s3:PutObjectRetention\",\"s3:PutObjectTagging\",\"s3:PutObjectVersionTagging\",\"s3:Abort*\"],\"Resource\":[\"arn:aws:s3:::${S3Bucket}\",\"arn:aws:s3:::${S3Bucket}/*\"],\"Effect\":\"Allow\"},{\"Action\":[\"s3:GetObject*\",\"s3:GetBucket*\",\"s3:List*\",\"s3:DeleteObject*\",\"s3:PutObject\",\"s3:PutObjectLegalHold\",\"s3:PutObjectRetention\",\"s3:PutObjectTagging\",\"s3:PutObjectVersionTagging\",\"s3:Abort*\"],\"Resource\":[\"arn:aws:s3:::${S3Bucket3}\",\"arn:aws:s3:::${S3Bucket3}/*\"],\"Effect\":\"Allow\"}]}"
+            Roles: 
+              - !Ref IAMRole9
+            PolicyName: !Ref IAMPolicy17
+
+    IAMPolicy9:
+        Type: "AWS::IAM::Policy"
+        Properties:
+            PolicyDocument: !Sub "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Action\":[\"cloudformation:CreateChangeSet\",\"cloudformation:DeleteChangeSet\",\"cloudformation:DescribeChangeSet\",\"cloudformation:DescribeStacks\",\"cloudformation:ExecuteChangeSet\",\"cloudformation:CreateStack\",\"cloudformation:UpdateStack\",\"cloudformation:RollbackStack\",\"cloudformation:ContinueUpdateRollback\"],\"Resource\":\"*\",\"Effect\":\"Allow\",\"Sid\":\"CloudFormationPermissions\"},{\"Condition\":{\"StringNotEquals\":{\"s3:ResourceAccount\":\"${AWS::AccountId}\"}},\"Action\":[\"s3:GetObject*\",\"s3:GetBucket*\",\"s3:List*\",\"s3:Abort*\",\"s3:DeleteObject*\",\"s3:PutObject*\"],\"Resource\":\"*\",\"Effect\":\"Allow\",\"Sid\":\"PipelineCrossAccountArtifactsBucket\"},{\"Condition\":{\"StringEquals\":{\"kms:ViaService\":\"s3.${AWS::Region}.amazonaws.com\"}},\"Action\":[\"kms:Decrypt\",\"kms:DescribeKey\",\"kms:Encrypt\",\"kms:ReEncrypt*\",\"kms:GenerateDataKey*\"],\"Resource\":\"*\",\"Effect\":\"Allow\",\"Sid\":\"PipelineCrossAccountArtifactsKey\"},{\"Action\":\"iam:PassRole\",\"Resource\":\"arn:aws:iam::${AWS::AccountId}:role/${IAMRole17}\",\"Effect\":\"Allow\"},{\"Action\":[\"cloudformation:DescribeStackEvents\",\"cloudformation:GetTemplate\",\"cloudformation:DeleteStack\",\"cloudformation:UpdateTerminationProtection\",\"sts:GetCallerIdentity\",\"cloudformation:GetTemplateSummary\"],\"Resource\":\"*\",\"Effect\":\"Allow\",\"Sid\":\"CliPermissions\"},{\"Action\":[\"s3:GetObject*\",\"s3:GetBucket*\",\"s3:List*\"],\"Resource\":[\"arn:aws:s3:::${S3Bucket2}\",\"arn:aws:s3:::${S3Bucket2}/*\"],\"Effect\":\"Allow\",\"Sid\":\"CliStagingBucket\"},{\"Action\":[\"ssm:GetParameter\",\"ssm:GetParameters\"],\"Resource\":[\"arn:aws:ssm:${AWS::Region}:${AWS::AccountId}:parameter/cdk-bootstrap/hnb659fds/version\"],\"Effect\":\"Allow\",\"Sid\":\"ReadVersion\"},{\"Action\":[\"cloudformation:CreateStackRefactor\",\"cloudformation:DescribeStackRefactor\",\"cloudformation:ExecuteStackRefactor\",\"cloudformation:ListStackRefactorActions\",\"cloudformation:ListStackRefactors\",\"cloudformation:ListStacks\"],\"Resource\":\"*\",\"Effect\":\"Allow\",\"Sid\":\"Refactor\"}]}"
+            Roles: 
+              - !Ref IAMRole18
+            PolicyName: "default"
+
+    IAMPolicy10:
+        Type: "AWS::IAM::Policy"
+        Properties:
+            PolicyDocument: !Sub "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Action\":\"lambda:InvokeFunction\",\"Resource\":[\"arn:aws:lambda:${AWS::Region}:${AWS::AccountId}:function:${LambdaFunction}\",\"arn:aws:lambda:${AWS::Region}:${AWS::AccountId}:function:${LambdaFunction}:*\"],\"Effect\":\"Allow\"}]}"
+            Roles: 
+              - !Ref IAMRole10
+            PolicyName: "AmplifyTableWaiterStateMachineRoleDefaultPolicy89F3836A"
+
+    IAMPolicy11:
+        Type: "AWS::IAM::Policy"
+        Properties:
+            PolicyDocument: !Sub "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Action\":[\"dynamodb:CreateTable\",\"dynamodb:UpdateTable\",\"dynamodb:DeleteTable\",\"dynamodb:DescribeTable\",\"dynamodb:DescribeContinuousBackups\",\"dynamodb:DescribeTimeToLive\",\"dynamodb:UpdateContinuousBackups\",\"dynamodb:UpdateTimeToLive\",\"dynamodb:TagResource\",\"dynamodb:UntagResource\",\"dynamodb:ListTagsOfResource\"],\"Resource\":\"arn:aws:dynamodb:${AWS::Region}:${AWS::AccountId}:table/*-omfnupyukzerhnv6ip3hntzqky-NONE\",\"Effect\":\"Allow\"},{\"Action\":\"lambda:ListTags\",\"Resource\":\"arn:aws:lambda:${AWS::Region}:${AWS::AccountId}:function:*TableManager*\",\"Effect\":\"Allow\"}]}"
+            Roles: 
+              - !Ref IAMRole12
+            PolicyName: !Ref IAMPolicy14
+
+    IAMPolicy12:
+        Type: "AWS::IAM::Policy"
+        Properties:
+            PolicyDocument: !Sub "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Action\":\"states:StartExecution\",\"Resource\":\"arn:aws:states:${AWS::Region}:${AWS::AccountId}:stateMachine:AmplifyTableWaiterStateMachine060600BC-en6lIZMNd1e2\",\"Effect\":\"Allow\"}]}"
+            Roles: 
+              - !Ref IAMRole12
+            PolicyName: "AmplifyManagedTableOnEventRoleDefaultPolicyF6DABCB6"
+
+    IAMPolicy13:
+        Type: "AWS::IAM::Policy"
+        Properties:
+            PolicyDocument: !Sub "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Condition\":{\"StringEquals\":{\"aws:ResourceAccount\":[\"${AWS::AccountId}\"]}},\"Action\":[\"s3:GetObject*\",\"s3:GetBucket*\",\"s3:GetEncryptionConfiguration\",\"s3:List*\",\"s3:DeleteObject*\",\"s3:PutObject*\",\"s3:Abort*\"],\"Resource\":[\"arn:aws:s3:::${S3Bucket2}\",\"arn:aws:s3:::${S3Bucket2}/*\"],\"Effect\":\"Allow\"},{\"Action\":[\"kms:Decrypt\",\"kms:DescribeKey\",\"kms:Encrypt\",\"kms:ReEncrypt*\",\"kms:GenerateDataKey*\"],\"Resource\":\"arn:aws:kms:${AWS::Region}:${AWS::AccountId}:key/AWS_MANAGED_KEY\",\"Effect\":\"Allow\"}]}"
+            Roles: 
+              - !Ref IAMRole19
+            PolicyName: !Sub "cdk-hnb659fds-file-publishing-role-${IAMPolicy9}-policy-${AWS::AccountId}-${AWS::Region}"
+
+    IAMPolicy14:
+        Type: "AWS::IAM::Policy"
+        Properties:
+            PolicyDocument: !Sub "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Action\":[\"dynamodb:CreateTable\",\"dynamodb:UpdateTable\",\"dynamodb:DeleteTable\",\"dynamodb:DescribeTable\",\"dynamodb:DescribeContinuousBackups\",\"dynamodb:DescribeTimeToLive\",\"dynamodb:UpdateContinuousBackups\",\"dynamodb:UpdateTimeToLive\",\"dynamodb:TagResource\",\"dynamodb:UntagResource\",\"dynamodb:ListTagsOfResource\"],\"Resource\":\"arn:aws:dynamodb:${AWS::Region}:${AWS::AccountId}:table/*-omfnupyukzerhnv6ip3hntzqky-NONE\",\"Effect\":\"Allow\"},{\"Action\":\"lambda:ListTags\",\"Resource\":\"arn:aws:lambda:${AWS::Region}:${AWS::AccountId}:function:*TableManager*\",\"Effect\":\"Allow\"}]}"
+            Roles: 
+              - !Ref IAMRole11
+            PolicyName: "CreateUpdateDeleteTablesPolicy"
+
+    IAMPolicy15:
+        Type: "AWS::IAM::Policy"
+        Properties:
+            PolicyDocument: !Sub "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Action\":[\"ecr:PutImage\",\"ecr:InitiateLayerUpload\",\"ecr:UploadLayerPart\",\"ecr:CompleteLayerUpload\",\"ecr:BatchCheckLayerAvailability\",\"ecr:DescribeRepositories\",\"ecr:DescribeImages\",\"ecr:BatchGetImage\",\"ecr:GetDownloadUrlForLayer\"],\"Resource\":\"arn:aws:ecr:${AWS::Region}:${AWS::AccountId}:repository/cdk-hnb659fds-container-assets-${AWS::AccountId}-${AWS::Region}\",\"Effect\":\"Allow\"},{\"Action\":[\"ecr:GetAuthorizationToken\"],\"Resource\":\"*\",\"Effect\":\"Allow\"}]}"
+            Roles: 
+              - !Ref IAMRole20
+            PolicyName: !Sub "cdk-hnb659fds-image-publishing-role-${IAMPolicy9}-policy-${AWS::AccountId}-${AWS::Region}"
+
+    IAMPolicy16:
+        Type: "AWS::IAM::Policy"
+        Properties:
+            PolicyDocument: "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Action\":[\"kms:Decrypt\"],\"Resource\":\"*\",\"Effect\":\"Deny\",\"Sid\":\"DontReadSecrets\"}]}"
+            Roles: 
+              - !Ref IAMRole21
+            PolicyName: "LookupRolePolicy"
+
+    IAMPolicy17:
+        Type: "AWS::IAM::Policy"
+        Properties:
+            PolicyDocument: !Sub "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Action\":[\"s3:GetObject*\",\"s3:GetBucket*\",\"s3:List*\"],\"Resource\":[\"arn:aws:s3:::${S3Bucket2}\",\"arn:aws:s3:::${S3Bucket2}/*\"],\"Effect\":\"Allow\"},{\"Action\":[\"s3:GetObject*\",\"s3:GetBucket*\",\"s3:List*\",\"s3:DeleteObject*\",\"s3:PutObject\",\"s3:PutObjectLegalHold\",\"s3:PutObjectRetention\",\"s3:PutObjectTagging\",\"s3:PutObjectVersionTagging\",\"s3:Abort*\"],\"Resource\":[\"arn:aws:s3:::${S3Bucket5}\",\"arn:aws:s3:::${S3Bucket5}/*\"],\"Effect\":\"Allow\"},{\"Action\":[\"s3:GetObject*\",\"s3:GetBucket*\",\"s3:List*\",\"s3:DeleteObject*\",\"s3:PutObject\",\"s3:PutObjectLegalHold\",\"s3:PutObjectRetention\",\"s3:PutObjectTagging\",\"s3:PutObjectVersionTagging\",\"s3:Abort*\"],\"Resource\":[\"arn:aws:s3:::${S3Bucket6}\",\"arn:aws:s3:::${S3Bucket6}/*\"],\"Effect\":\"Allow\"}]}"
+            Roles: 
+              - !Ref IAMRole16
+            PolicyName: "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C1536MiBServiceRoleDefaultPolicyFF1C635B"
+
+    IAMPolicy18:
+        Type: "AWS::IAM::Policy"
+        Properties:
+            PolicyDocument: !Sub "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Action\":[\"dynamodb:BatchGetItem\",\"dynamodb:BatchWriteItem\",\"dynamodb:PutItem\",\"dynamodb:DeleteItem\",\"dynamodb:GetItem\",\"dynamodb:Scan\",\"dynamodb:Query\",\"dynamodb:UpdateItem\",\"dynamodb:ConditionCheckItem\",\"dynamodb:DescribeTable\",\"dynamodb:GetRecords\",\"dynamodb:GetShardIterator\"],\"Resource\":[\"arn:aws:dynamodb:${AWS::Region}:${AWS::AccountId}:table/${DynamoDBTable2}\",\"arn:aws:dynamodb:${AWS::Region}:${AWS::AccountId}:table/${DynamoDBTable2}/*\"],\"Effect\":\"Allow\"}]}"
+            Roles: 
+              - !Ref IAMRole23
+            PolicyName: !Ref IAMPolicy20
+
+    IAMPolicy19:
+        Type: "AWS::IAM::Policy"
+        Properties:
+            PolicyDocument: |
+                {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Action": [
+                                "dynamodb:*"
+                            ],
+                            "Effect": "Allow",
+                            "Resource": "*"
+                        }
+                    ]
+                }
+            Roles: 
+              - !Sub "${LambdaFunction10}-role-cdtyie8o"
+            PolicyName: "WriteAccessDynamoDB"
+
+    IAMPolicy20:
+        Type: "AWS::IAM::Policy"
+        Properties:
+            PolicyDocument: !Sub "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Action\":[\"dynamodb:BatchGetItem\",\"dynamodb:BatchWriteItem\",\"dynamodb:PutItem\",\"dynamodb:DeleteItem\",\"dynamodb:GetItem\",\"dynamodb:Scan\",\"dynamodb:Query\",\"dynamodb:UpdateItem\",\"dynamodb:ConditionCheckItem\",\"dynamodb:DescribeTable\",\"dynamodb:GetRecords\",\"dynamodb:GetShardIterator\"],\"Resource\":[\"arn:aws:dynamodb:${AWS::Region}:${AWS::AccountId}:table/${DynamoDBTable3}\",\"arn:aws:dynamodb:${AWS::Region}:${AWS::AccountId}:table/${DynamoDBTable3}/*\"],\"Effect\":\"Allow\"}]}"
+            Roles: 
+              - !Ref IAMRole25
+            PolicyName: "DynamoDBAccess"
+
+    IAMAccessKey:
+        Type: "AWS::IAM::AccessKey"
+        Properties:
+            Status: "Active"
+            UserName: "testing-user"
+
+    IAMAccessKey2:
+        Type: "AWS::IAM::AccessKey"
+        Properties:
+            Status: "Active"
+            UserName: "trungthanh"
+
+    CognitoIdentityPool:
+        Type: "AWS::Cognito::IdentityPool"
+        Properties:
+            IdentityPoolName: "amplifyAuthIdentityPool3FDE84CC_GI62bjsXwqvi"
+            AllowUnauthenticatedIdentities: true
+            CognitoIdentityProviders: 
+              - 
+                ProviderName: !Sub "cognito-idp.${AWS::Region}.amazonaws.com/${CognitoUserPool}"
+                ClientId: "4lb8fqg8kupco4s8aj9vkvgea1"
+                ServerSideTokenCheck: false
+
+    CognitoIdentityPool2:
+        Type: "AWS::Cognito::IdentityPool"
+        Properties:
+            IdentityPoolName: "amplifyAuthIdentityPool3FDE84CC_hzWqFV85WHCF"
+            AllowUnauthenticatedIdentities: true
+            CognitoIdentityProviders: 
+              - 
+                ProviderName: !Sub "cognito-idp.${AWS::Region}.amazonaws.com/${AWS::Region}_U2MqMgiLL"
+                ClientId: "mqif6m3njltva7vbv0dinhr4s"
+                ServerSideTokenCheck: false
+
+    CognitoIdentityPoolRoleAttachment:
+        Type: "AWS::Cognito::IdentityPoolRoleAttachment"
+        Properties:
+            IdentityPoolId: !Sub "${AWS::Region}:a1c11022-23cf-423a-aeb0-16b526030a44"
+            RoleMappings: 
+                "cognito-idp.us-east-1.amazonaws.com/us-east-1_U2MqMgiLL:mqif6m3njltva7vbv0dinhr4s": 
+                    Type: "Token"
+                    AmbiguousRoleResolution: "AuthenticatedRole"
+            Roles: 
+                authenticated: !Sub "arn:aws:iam::${AWS::AccountId}:role/amplify-frontendapp-henry-amplifyAuthauthenticatedU-ErsoEyypzvf8"
+                unauthenticated: !Sub "arn:aws:iam::${AWS::AccountId}:role/amplify-frontendapp-henry-amplifyAuthunauthenticate-e3Y1NFri8zvV"
+
+    CognitoIdentityPoolRoleAttachment2:
+        Type: "AWS::Cognito::IdentityPoolRoleAttachment"
+        Properties:
+            IdentityPoolId: !Sub "${AWS::Region}:ad26d216-4235-4d38-bdd7-282b56ffb0dd"
+            RoleMappings: 
+                "cognito-idp.us-east-1.amazonaws.com/us-east-1_t1er6vGiC:4lb8fqg8kupco4s8aj9vkvgea1": 
+                    Type: "Token"
+                    AmbiguousRoleResolution: "AuthenticatedRole"
+            Roles: 
+                authenticated: !GetAtt IAMRole2.Arn
+                unauthenticated: !GetAtt IAMRole6.Arn
+
+    CognitoUserPool:
+        Type: "AWS::Cognito::UserPool"
+        Properties:
+            UserPoolName: "amplifyAuthUserPool4BA7F805-dkt9AEppMcT7"
+            Policies: 
+                PasswordPolicy: 
+                    MinimumLength: 8
+                    RequireUppercase: true
+                    RequireLowercase: true
+                    RequireNumbers: true
+                    RequireSymbols: true
+                    TemporaryPasswordValidityDays: 7
+            LambdaConfig: {}
+            Schema: 
+              - 
+                Name: "profile"
+                AttributeDataType: "String"
+                DeveloperOnlyAttribute: false
+                Mutable: true
+                Required: false
+                StringAttributeConstraints: 
+                    MinLength: "0"
+                    MaxLength: "2048"
+              - 
+                Name: "address"
+                AttributeDataType: "String"
+                DeveloperOnlyAttribute: false
+                Mutable: true
+                Required: false
+                StringAttributeConstraints: 
+                    MinLength: "0"
+                    MaxLength: "2048"
+              - 
+                Name: "birthdate"
+                AttributeDataType: "String"
+                DeveloperOnlyAttribute: false
+                Mutable: true
+                Required: false
+                StringAttributeConstraints: 
+                    MinLength: "10"
+                    MaxLength: "10"
+              - 
+                Name: "gender"
+                AttributeDataType: "String"
+                DeveloperOnlyAttribute: false
+                Mutable: true
+                Required: false
+                StringAttributeConstraints: 
+                    MinLength: "0"
+                    MaxLength: "2048"
+              - 
+                Name: "preferred_username"
+                AttributeDataType: "String"
+                DeveloperOnlyAttribute: false
+                Mutable: true
+                Required: false
+                StringAttributeConstraints: 
+                    MinLength: "0"
+                    MaxLength: "2048"
+              - 
+                Name: "updated_at"
+                AttributeDataType: "Number"
+                DeveloperOnlyAttribute: false
+                Mutable: true
+                Required: false
+                NumberAttributeConstraints: 
+                    MinValue: "0"
+              - 
+                Name: "website"
+                AttributeDataType: "String"
+                DeveloperOnlyAttribute: false
+                Mutable: true
+                Required: false
+                StringAttributeConstraints: 
+                    MinLength: "0"
+                    MaxLength: "2048"
+              - 
+                Name: "picture"
+                AttributeDataType: "String"
+                DeveloperOnlyAttribute: false
+                Mutable: true
+                Required: false
+                StringAttributeConstraints: 
+                    MinLength: "0"
+                    MaxLength: "2048"
+              - 
+                Name: "identities"
+                AttributeDataType: "String"
+                DeveloperOnlyAttribute: false
+                Mutable: true
+                Required: false
+                StringAttributeConstraints: {}
+              - 
+                Name: "sub"
+                AttributeDataType: "String"
+                DeveloperOnlyAttribute: false
+                Mutable: false
+                Required: true
+                StringAttributeConstraints: 
+                    MinLength: "1"
+                    MaxLength: "2048"
+              - 
+                Name: "phone_number"
+                AttributeDataType: "String"
+                DeveloperOnlyAttribute: false
+                Mutable: true
+                Required: false
+                StringAttributeConstraints: 
+                    MinLength: "0"
+                    MaxLength: "2048"
+              - 
+                Name: "phone_number_verified"
+                AttributeDataType: "Boolean"
+                DeveloperOnlyAttribute: false
+                Mutable: true
+                Required: false
+              - 
+                Name: "zoneinfo"
+                AttributeDataType: "String"
+                DeveloperOnlyAttribute: false
+                Mutable: true
+                Required: false
+                StringAttributeConstraints: 
+                    MinLength: "0"
+                    MaxLength: "2048"
+              - 
+                Name: "locale"
+                AttributeDataType: "String"
+                DeveloperOnlyAttribute: false
+                Mutable: true
+                Required: false
+                StringAttributeConstraints: 
+                    MinLength: "0"
+                    MaxLength: "2048"
+              - 
+                Name: "email"
+                AttributeDataType: "String"
+                DeveloperOnlyAttribute: false
+                Mutable: true
+                Required: true
+                StringAttributeConstraints: 
+                    MinLength: "0"
+                    MaxLength: "2048"
+              - 
+                Name: "email_verified"
+                AttributeDataType: "Boolean"
+                DeveloperOnlyAttribute: false
+                Mutable: true
+                Required: false
+              - 
+                Name: "given_name"
+                AttributeDataType: "String"
+                DeveloperOnlyAttribute: false
+                Mutable: true
+                Required: false
+                StringAttributeConstraints: 
+                    MinLength: "0"
+                    MaxLength: "2048"
+              - 
+                Name: "family_name"
+                AttributeDataType: "String"
+                DeveloperOnlyAttribute: false
+                Mutable: true
+                Required: false
+                StringAttributeConstraints: 
+                    MinLength: "0"
+                    MaxLength: "2048"
+              - 
+                Name: "middle_name"
+                AttributeDataType: "String"
+                DeveloperOnlyAttribute: false
+                Mutable: true
+                Required: false
+                StringAttributeConstraints: 
+                    MinLength: "0"
+                    MaxLength: "2048"
+              - 
+                Name: "name"
+                AttributeDataType: "String"
+                DeveloperOnlyAttribute: false
+                Mutable: true
+                Required: false
+                StringAttributeConstraints: 
+                    MinLength: "0"
+                    MaxLength: "2048"
+              - 
+                Name: "nickname"
+                AttributeDataType: "String"
+                DeveloperOnlyAttribute: false
+                Mutable: true
+                Required: false
+                StringAttributeConstraints: 
+                    MinLength: "0"
+                    MaxLength: "2048"
+            AutoVerifiedAttributes: 
+              - "email"
+            UsernameAttributes: 
+              - "email"
+            SmsVerificationMessage: "The verification code to your new account is {####}"
+            EmailVerificationMessage: "The verification code to your new account is {####}"
+            EmailVerificationSubject: "Verify your new account"
+            MfaConfiguration: "OFF"
+            EmailConfiguration: 
+                EmailSendingAccount: "COGNITO_DEFAULT"
+            AdminCreateUserConfig: 
+                AllowAdminCreateUserOnly: false
+            UserPoolTags: 
+                "amplify:app-id": "d1m1jfdu9315t1"
+                "amplify:branch-name": "main"
+                "amplify:deployment-type": "branch"
+                "amplify:friendly-name": "amplifyAuth"
+                created-by: "amplify"
+            AccountRecoverySetting: 
+                RecoveryMechanisms: 
+                  - 
+                    Priority: 1
+                    Name: "verified_email"
+            UsernameConfiguration: 
+                CaseSensitive: false
+            VerificationMessageTemplate: 
+                SmsMessage: "The verification code to your new account is {####}"
+                EmailMessage: "The verification code to your new account is {####}"
+                EmailSubject: "Verify your new account"
+                DefaultEmailOption: "CONFIRM_WITH_CODE"
+
+    CognitoUserPoolClient:
+        Type: "AWS::Cognito::UserPoolClient"
+        Properties:
+            UserPoolId: !Sub "${AWS::Region}_U2MqMgiLL"
+            ClientName: "amplifyAuthUserPoolAppClient2626C6F8-kp0XnfNweR7M"
+            RefreshTokenValidity: 30
+            ExplicitAuthFlows: 
+              - "ALLOW_CUSTOM_AUTH"
+              - "ALLOW_REFRESH_TOKEN_AUTH"
+              - "ALLOW_USER_SRP_AUTH"
+            PreventUserExistenceErrors: "ENABLED"
+            SupportedIdentityProviders: 
+              - "COGNITO"
+            CallbackURLs: 
+              - "https://example.com"
+            AllowedOAuthFlows: 
+              - "code"
+            AllowedOAuthScopes: 
+              - "aws.cognito.signin.user.admin"
+              - "email"
+              - "openid"
+              - "phone"
+              - "profile"
+            AllowedOAuthFlowsUserPoolClient: true
+            TokenValidityUnits: {}
+
+    CognitoUserPoolClient2:
+        Type: "AWS::Cognito::UserPoolClient"
+        Properties:
+            UserPoolId: !Ref CognitoUserPool
+            ClientName: "amplifyAuthUserPoolAppClient2626C6F8-9bDcmzhqTrkv"
+            RefreshTokenValidity: 30
+            ExplicitAuthFlows: 
+              - "ALLOW_CUSTOM_AUTH"
+              - "ALLOW_REFRESH_TOKEN_AUTH"
+              - "ALLOW_USER_SRP_AUTH"
+            PreventUserExistenceErrors: "ENABLED"
+            SupportedIdentityProviders: 
+              - "COGNITO"
+            CallbackURLs: 
+              - "https://example.com"
+            AllowedOAuthFlows: 
+              - "code"
+            AllowedOAuthScopes: 
+              - "aws.cognito.signin.user.admin"
+              - "email"
+              - "openid"
+              - "phone"
+              - "profile"
+            AllowedOAuthFlowsUserPoolClient: true
+            TokenValidityUnits: {}
+
+    CognitoUserPoolUser:
+        Type: "AWS::Cognito::UserPoolUser"
+        Properties:
+            Username: "d4386448-c0e1-7045-8d2c-c44c6f91f39b"
+            UserPoolId: !Sub "${AWS::Region}_U2MqMgiLL"
+            UserAttributes: 
+              - 
+                Name: "email"
+                Value: "hungnguyenquoc8a2@gmail.com"
+              - 
+                Name: "email_verified"
+                Value: "true"
+              - 
+                Name: "sub"
+                Value: "d4386448-c0e1-7045-8d2c-c44c6f91f39b"
+
+    CognitoUserPoolUser2:
+        Type: "AWS::Cognito::UserPoolUser"
+        Properties:
+            Username: "a4f8a4f8-4011-7072-93fc-fc4bc0320f7d"
+            UserPoolId: !Ref CognitoUserPool
+            UserAttributes: 
+              - 
+                Name: "email"
+                Value: "hungnguyenquoc8a2@gmail.com"
+              - 
+                Name: "email_verified"
+                Value: "true"
+              - 
+                Name: "sub"
+                Value: "a4f8a4f8-4011-7072-93fc-fc4bc0320f7d"
+
+    AmplifyApp:
+        Type: "AWS::Amplify::App"
+        Properties:
+            Name: "VPBank-Hackathon-2025-Frontend"
+            Repository: "https://github.com/HenryNg101/VPBank-Hackathon-2025-Frontend"
+            IAMServiceRole: !GetAtt IAMRole15.Arn
+            CustomRules: 
+              - 
+                Source: "/<*>"
+                Target: "/index.html"
+                Status: "404-200"
+            BuildSpec: |
+                version: 1
+                backend:
+                  phases:
+                    build:
+                      commands:
+                        - npm ci --cache .npm --prefer-offline
+                        - npx ampx pipeline-deploy --branch $AWS_BRANCH --app-id $AWS_APP_ID
+                frontend:
+                  phases:
+                    build:
+                      commands:
+                        - npm run build
+                  artifacts:
+                    baseDirectory: .next
+                    files:
+                      - '**/*'
+                  cache:
+                    paths:
+                      - .next/cache/**/*
+                      - .npm/**/*
+                
+            EnableBranchAutoDeletion: false
+            AccessToken: "REPLACEME"
+            OauthToken: "REPLACEME"
+            CustomHeaders: ""
+
+    AmplifyBranch:
+        Type: "AWS::Amplify::Branch"
+        Properties:
+            BranchName: "main"
+            Stage: "PRODUCTION"
+            AppId: "d1m1jfdu9315t1"
+            EnablePullRequestPreview: false
+            EnableAutoBuild: true
+            EnablePerformanceMode: false
 
     SQSQueue:
         Type: "AWS::SQS::Queue"
@@ -240,7 +3519,7 @@ Resources:
             MessageRetentionPeriod: "345600"
             ReceiveMessageWaitTimeSeconds: "0"
             VisibilityTimeout: "30"
-            QueueName: "docx-queue"
+            QueueName: "excel-queue"
             RedrivePolicy: !Sub "{\"deadLetterTargetArn\":\"${SQSQueue4}\",\"maxReceiveCount\":10}"
 
     SQSQueue2:
@@ -251,7 +3530,7 @@ Resources:
             MessageRetentionPeriod: "345600"
             ReceiveMessageWaitTimeSeconds: "0"
             VisibilityTimeout: "30"
-            QueueName: "excel-queue"
+            QueueName: "docx-queue"
             RedrivePolicy: !Sub "{\"deadLetterTargetArn\":\"${SQSQueue4}\",\"maxReceiveCount\":10}"
 
     SQSQueue3:
@@ -296,6 +3575,86 @@ Resources:
             VisibilityTimeout: "30"
             QueueName: "semantic-chunking-queue"
             RedrivePolicy: !Sub "{\"deadLetterTargetArn\":\"${SQSQueue4}\",\"maxReceiveCount\":10}"
+
+    SQSQueue7:
+        Type: "AWS::SQS::Queue"
+        Properties:
+            DelaySeconds: "0"
+            MaximumMessageSize: "262144"
+            MessageRetentionPeriod: "345600"
+            ReceiveMessageWaitTimeSeconds: "0"
+            VisibilityTimeout: "30"
+            QueueName: "vector-embedding-queue"
+            RedrivePolicy: !Sub "{\"deadLetterTargetArn\":\"${SQSQueue4}\",\"maxReceiveCount\":10}"
+
+    SQSQueuePolicy:
+        Type: "AWS::SQS::QueuePolicy"
+        Properties:
+            PolicyDocument: !Sub "{\"Version\":\"2012-10-17\",\"Id\":\"__${IAMPolicy9}_policy_ID\",\"Statement\":[{\"Sid\":\"__owner_statement\",\"Effect\":\"Allow\",\"Principal\":{\"AWS\":\"arn:aws:iam::${AWS::AccountId}:root\"},\"Action\":\"SQS:*\",\"Resource\":\"${SQSQueue}\"}]}"
+            Queues: 
+              - !Sub "https://sqs.${AWS::Region}.amazonaws.com/${AWS::AccountId}/${SQSQueue.QueueName}"
+
+    SQSQueuePolicy2:
+        Type: "AWS::SQS::QueuePolicy"
+        Properties:
+            PolicyDocument: !Sub "{\"Version\":\"2012-10-17\",\"Id\":\"__${IAMPolicy9}_policy_ID\",\"Statement\":[{\"Sid\":\"__owner_statement\",\"Effect\":\"Allow\",\"Principal\":{\"AWS\":\"arn:aws:iam::${AWS::AccountId}:root\"},\"Action\":\"SQS:*\",\"Resource\":\"${SQSQueue2}\"}]}"
+            Queues: 
+              - !Sub "https://sqs.${AWS::Region}.amazonaws.com/${AWS::AccountId}/${SQSQueue2.QueueName}"
+
+    SQSQueuePolicy3:
+        Type: "AWS::SQS::QueuePolicy"
+        Properties:
+            PolicyDocument: !Sub "{\"Version\":\"2012-10-17\",\"Id\":\"__${IAMPolicy9}_policy_ID\",\"Statement\":[{\"Sid\":\"__owner_statement\",\"Effect\":\"Allow\",\"Principal\":{\"AWS\":\"arn:aws:iam::${AWS::AccountId}:root\"},\"Action\":\"SQS:*\",\"Resource\":\"${SQSQueue3}\"}]}"
+            Queues: 
+              - !Sub "https://sqs.${AWS::Region}.amazonaws.com/${AWS::AccountId}/${SQSQueue3.QueueName}"
+
+    SQSQueuePolicy4:
+        Type: "AWS::SQS::QueuePolicy"
+        Properties:
+            PolicyDocument: !Sub "{\"Version\":\"2012-10-17\",\"Id\":\"__${IAMPolicy9}_policy_ID\",\"Statement\":[{\"Sid\":\"__owner_statement\",\"Effect\":\"Allow\",\"Principal\":{\"AWS\":\"arn:aws:iam::${AWS::AccountId}:root\"},\"Action\":\"SQS:*\",\"Resource\":\"${SQSQueue4}\"}]}"
+            Queues: 
+              - !Sub "https://sqs.${AWS::Region}.amazonaws.com/${AWS::AccountId}/${SQSQueue4.QueueName}"
+
+    SQSQueuePolicy5:
+        Type: "AWS::SQS::QueuePolicy"
+        Properties:
+            PolicyDocument: !Sub "{\"Version\":\"2012-10-17\",\"Id\":\"__${IAMPolicy9}_policy_ID\",\"Statement\":[{\"Sid\":\"__owner_statement\",\"Effect\":\"Allow\",\"Principal\":{\"AWS\":\"arn:aws:iam::${AWS::AccountId}:root\"},\"Action\":\"SQS:*\",\"Resource\":\"${SQSQueue5}\"}]}"
+            Queues: 
+              - !Sub "https://sqs.${AWS::Region}.amazonaws.com/${AWS::AccountId}/${SQSQueue5.QueueName}"
+
+    SQSQueuePolicy6:
+        Type: "AWS::SQS::QueuePolicy"
+        Properties:
+            PolicyDocument: !Sub "{\"Version\":\"2012-10-17\",\"Id\":\"__${IAMPolicy9}_policy_ID\",\"Statement\":[{\"Sid\":\"__owner_statement\",\"Effect\":\"Allow\",\"Principal\":{\"AWS\":\"arn:aws:iam::${AWS::AccountId}:root\",\"Service\":\"s3.amazonaws.com\"},\"Action\":\"SQS:*\",\"Resource\":\"${SQSQueue6}\",\"Condition\":{\"ArnLike\":{\"aws:SourceArn\":\"arn:aws:s3:::${S3Bucket4}\"}}}]}"
+            Queues: 
+              - !Sub "https://sqs.${AWS::Region}.amazonaws.com/${AWS::AccountId}/${SQSQueue6.QueueName}"
+
+    SQSQueuePolicy7:
+        Type: "AWS::SQS::QueuePolicy"
+        Properties:
+            PolicyDocument: !Sub "{\"Version\":\"2012-10-17\",\"Id\":\"__${IAMPolicy9}_policy_ID\",\"Statement\":[{\"Sid\":\"__owner_statement\",\"Effect\":\"Allow\",\"Principal\":{\"Service\":\"s3.amazonaws.com\",\"AWS\":\"arn:aws:iam::${AWS::AccountId}:root\"},\"Action\":\"SQS:*\",\"Resource\":\"${SQSQueue7}\",\"Condition\":{\"ArnLike\":{\"aws:SourceArn\":\"arn:aws:s3:::${S3Bucket4}\"}}}]}"
+            Queues: 
+              - !Sub "https://sqs.${AWS::Region}.amazonaws.com/${AWS::AccountId}/${SQSQueue7.QueueName}"
+
+    CEAnomalyMonitor:
+        Type: "AWS::CE::AnomalyMonitor"
+        Properties:
+            MonitorName: "Default-Services-Monitor"
+            MonitorType: "DIMENSIONAL"
+            MonitorDimension: "SERVICE"
+
+    CEAnomalySubscription:
+        Type: "AWS::CE::AnomalySubscription"
+        Properties:
+            SubscriptionName: "Default-Services-Subscription"
+            Frequency: "DAILY"
+            MonitorArnList: 
+              - !Ref CEAnomalyMonitor
+            Subscribers: 
+              - 
+                Address: "henryng.tech.dev@gmail.com"
+                Type: "EMAIL"
+                Status: "CONFIRMED"
 
     BudgetsBudget:
         Type: "AWS::Budgets::Budget"
